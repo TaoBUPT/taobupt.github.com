@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="dfs questions review"/>
+
+
+
+
+  <meta name="keywords" content="dfs," />
+
+
+
+
+  <link rel="alternate" href="/default" title="Stewart">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/08/01/DFSQuestions/"/>
+
+
+<meta name="description" content="dfs questions review">
+<meta name="keywords" content="dfs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DFSQuestions">
+<meta property="og:url" content="http://yoursite.com/2017/08/01/DFSQuestions/index.html">
+<meta property="og:site_name" content="Stewart">
+<meta property="og:description" content="dfs questions review">
+<meta property="og:updated_time" content="2017-08-02T05:30:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DFSQuestions">
+<meta name="twitter:description" content="dfs questions review">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-83143113-1', 'auto');
+        ga('send', 'pageview');
+  </script>
+
+
+
+    <title> DFSQuestions · Stewart </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Stewart</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Stewart</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              Categories
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input" />
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          DFSQuestions
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Aug 1, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Review"><span class="toc-text">Review</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#200-Number-of-islands"><span class="toc-text">200 Number of islands</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#110-Balanced-binary-tree"><span class="toc-text">110 Balanced binary tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#124-Binary-Tree-Maximum-Path-Sum"><span class="toc-text">124 Binary Tree Maximum Path Sum</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#99-Recover-Binary-Search-Tree"><span class="toc-text">99 Recover Binary Search Tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#133-Clone-Graph"><span class="toc-text">133 Clone Graph</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#114-Flatten-Binary-Tree-to-Linked-List"><span class="toc-text">114 Flatten Binary Tree to Linked List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#199-Binary-Tree-Right-Side-View"><span class="toc-text">199 Binary Tree Right Side View</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#301-Remove-Invalid-Parentheses"><span class="toc-text">301 Remove Invalid Parentheses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#337-House-Robber-III"><span class="toc-text">337 House Robber III</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#339-Nested-List-Weight-Sum"><span class="toc-text">339 Nested List Weight Sum</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><hr>
+<a id="more"></a>
+<ul>
+<li>200 Number of islands</li>
+<li>110 Balanced binary tree</li>
+<li>124 Binary Tree Maximum Path Sum</li>
+<li>99 Recover Binary Search Tree</li>
+<li>133 Clone Graph</li>
+<li>114 Flatten Binary Tree to Linked List</li>
+<li>199 Binary Tree Right Side View</li>
+<li>301 Remove Invalid Parentheses</li>
+<li>337 House Robber III</li>
+<li>339 Nested List Weight Sum</li>
+</ul>
+<h3 id="200-Number-of-islands"><a href="#200-Number-of-islands" class="headerlink" title="200 Number of islands"></a>200 Number of islands</h3><p>思路： 求多少个联通块，dfs，bfs，unionfind</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">public void dfs(int x,int y,boolean[][]vis,char[][]grid)&#123;</div><div class="line">        if(x&lt;0||y&lt;0||x&gt;=grid.length||y&gt;=grid[0].length||vis[x][y]||grid[x][y]==&apos;0&apos;)</div><div class="line">            return;</div><div class="line">        vis[x][y]=true;</div><div class="line">        dfs(x+1,y,vis,grid);</div><div class="line">        dfs(x-1,y,vis,grid);</div><div class="line">        dfs(x,y+1,vis,grid);</div><div class="line">        dfs(x,y-1,vis,grid);</div><div class="line">    &#125;</div><div class="line">    public int numIslands(char[][] grid) &#123;</div><div class="line">        if(grid.length==0||grid[0].length==0)</div><div class="line">            return 0;</div><div class="line">        int m = grid.length,n=grid[0].length;</div><div class="line">        int cnt=0;</div><div class="line">        boolean [][]vis=new boolean[m][n];</div><div class="line">        for(int i=0;i&lt;m;++i)&#123;</div><div class="line">            for(int j=0;j&lt;n;++j)&#123;</div><div class="line">                if(grid[i][j]==&apos;1&apos; &amp;&amp; !vis[i][j])&#123;</div><div class="line">                    cnt++;</div><div class="line">                    dfs(i,j,vis,grid);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return cnt;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="110-Balanced-binary-tree"><a href="#110-Balanced-binary-tree" class="headerlink" title="110 Balanced binary tree"></a>110 Balanced binary tree</h3><p>思路： 树平衡这种题一定要计算高度的。笨点的每个结点都要查左右子树高度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public int getHeight(TreeNode root)&#123;</div><div class="line">        if(root==null)</div><div class="line">            return 0;</div><div class="line">        int l = getHeight(root.left);</div><div class="line">        int r = getHeight(root.right);</div><div class="line">        if(l==-1||r==-1||Math.abs(l-r)&gt;1)</div><div class="line">            return -1;</div><div class="line">        return Math.max(l,r)+1;</div><div class="line">    &#125;</div><div class="line">    public boolean isBalanced(TreeNode root) &#123;</div><div class="line">        return getHeight(root)!=-1;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="124-Binary-Tree-Maximum-Path-Sum"><a href="#124-Binary-Tree-Maximum-Path-Sum" class="headerlink" title="124 Binary Tree Maximum Path Sum"></a>124 Binary Tree Maximum Path Sum</h3><p>思路： 第一次做的时候一脸懵逼，其实仔细想想，我们需要借助一个dfs函数返回一个值供父节点使用，这个值因该是math.max(cur.val,cur.val+left,cur.val+right),不能有cur.val+left+right,这样就会cross，不能再向上拓展了。全局变量记录这四项的最大值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public int dfs(TreeNode root,int []res)&#123;</div><div class="line">       if(root==null)</div><div class="line">           return 0;</div><div class="line">       int l=dfs(root.left,res);</div><div class="line">       int r = dfs(root.right,res);</div><div class="line">       int ans=Math.max(l+root.val,Math.max(r+root.val,root.val));</div><div class="line">       res[0]=Math.max(Math.max(ans,res[0]),l+r+root.val);</div><div class="line">       return ans;</div><div class="line">   &#125;</div><div class="line">   public int maxPathSum(TreeNode root) &#123;</div><div class="line">       int []res=new int[1];</div><div class="line">       res[0]=Integer.MIN_VALUE;</div><div class="line">       dfs(root,res);</div><div class="line">       return res[0];</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h3 id="99-Recover-Binary-Search-Tree"><a href="#99-Recover-Binary-Search-Tree" class="headerlink" title="99 Recover Binary Search Tree"></a>99 Recover Binary Search Tree</h3><p>思路： 中序遍历，然后会发现两次pre.val&gt;root.val,你画画图试试，第一次的异常点事pre，第二个异常点事root。笨一点就可以先把值打印，然后就排序，赋值回去。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">public TreeNode first=null;</div><div class="line">    public TreeNode second=null;</div><div class="line">    public TreeNode pre=null;</div><div class="line"></div><div class="line">    public void inorder(TreeNode root)&#123;</div><div class="line">        if(root==null)</div><div class="line">            return;</div><div class="line">        inorder(root.left);</div><div class="line">        if(pre!=null)&#123;</div><div class="line">            if(pre.val&gt;root.val)&#123;</div><div class="line">                if(first==null)</div><div class="line">                    first=pre;</div><div class="line">                second=root;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        pre=root;</div><div class="line">        inorder(root.right);</div><div class="line">        //pre=root;</div><div class="line">    &#125;</div><div class="line">    public void recoverTree(TreeNode root)&#123;</div><div class="line">        inorder(root);</div><div class="line">        if(first!=null &amp;&amp; second!=null)&#123;</div><div class="line">            int tmp = first.val;</div><div class="line">            first.val=second.val;</div><div class="line">            second.val=tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="133-Clone-Graph"><a href="#133-Clone-Graph" class="headerlink" title="133 Clone Graph"></a>133 Clone Graph</h3><p>思路： recursive 的方法太简单，简单说说bfs的way，遍历图，如果map里没有，就创建新的node，否则不创建，但是最后都要关联起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) &#123;</div><div class="line">        Map&lt;UndirectedGraphNode,UndirectedGraphNode&gt;map=new HashMap&lt;&gt;();</div><div class="line">        if(node==null)</div><div class="line">            return null;</div><div class="line">        Queue&lt;UndirectedGraphNode&gt;q=new LinkedList&lt;&gt;();</div><div class="line">        q.offer(node);</div><div class="line">        map.put(node,new UndirectedGraphNode(node.label));</div><div class="line">        while(!q.isEmpty())&#123;</div><div class="line">            UndirectedGraphNode top = q.poll();</div><div class="line">            for(UndirectedGraphNode ne:top.neighbors)&#123;</div><div class="line">                if(!map.containsKey(ne))&#123;</div><div class="line">                    map.put(ne,new UndirectedGraphNode(ne.label));</div><div class="line">                    q.offer(ne);</div><div class="line">                &#125;</div><div class="line">                map.get(top).neighbors.add(map.get(ne));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return map.get(node);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    </div><div class="line">    //recursive way</div><div class="line">    </div><div class="line">    Map&lt;UndirectedGraphNode,UndirectedGraphNode&gt;map=new HashMap&lt;&gt;();</div><div class="line">    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) &#123;</div><div class="line">        if(node==null)</div><div class="line">            return null;</div><div class="line">        if(!map.containsKey(node))&#123;</div><div class="line">            map.put(node,new UndirectedGraphNode(node.label));</div><div class="line">            for(UndirectedGraphNode child:node.neighbors)</div><div class="line">                map.get(node).neighbors.add(cloneGraph(child));</div><div class="line">        &#125;</div><div class="line">        return map.get(node);</div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="114-Flatten-Binary-Tree-to-Linked-List"><a href="#114-Flatten-Binary-Tree-to-Linked-List" class="headerlink" title="114 Flatten Binary Tree to Linked List"></a>114 Flatten Binary Tree to Linked List</h3><p>思路：后续遍历，仔细揣摩一下，当然，也可以iterative</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">TreeNode pre=null;</div><div class="line">    public void flatten(TreeNode root) &#123;</div><div class="line">        if(root==null)</div><div class="line">            return;</div><div class="line">        flatten(root.right);</div><div class="line">        flatten(root.left);</div><div class="line">        root.right=pre;</div><div class="line">        root.left=null;</div><div class="line">        pre=root;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    </div><div class="line">    public void flatten(TreeNode root) &#123;</div><div class="line">        if(root==null)</div><div class="line">            return;</div><div class="line">        TreeNode node = root;</div><div class="line">        while(node!=null)&#123;</div><div class="line">            if(node.left!=null)&#123;</div><div class="line">                TreeNode cur = node.left;</div><div class="line">                while(cur.right!=null)</div><div class="line">                    cur=cur.right;</div><div class="line">                cur.right=node.right;</div><div class="line">                node.right=node.left;</div><div class="line">                node.left=null;</div><div class="line">            &#125;</div><div class="line">            node=node.right;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="199-Binary-Tree-Right-Side-View"><a href="#199-Binary-Tree-Right-Side-View" class="headerlink" title="199 Binary Tree Right Side View"></a>199 Binary Tree Right Side View</h3><p>思路： 和level order很像, bfs的方法我就懒得写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public void dfs(List&lt;Integer&gt;res,TreeNode root,int level)&#123;</div><div class="line">       if(root==null)</div><div class="line">           return;</div><div class="line">       if(level&gt;=res.size())</div><div class="line">           res.add(root.val);</div><div class="line">       dfs(res,root.right,level+1);</div><div class="line">       dfs(res,root.left,level+1);</div><div class="line">   &#125;</div><div class="line">   public List&lt;Integer&gt; rightSideView(TreeNode root) &#123;</div><div class="line">       List&lt;Integer&gt;res=new ArrayList&lt;&gt;();</div><div class="line">       dfs(res,root,0);</div><div class="line">       return res;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h3 id="301-Remove-Invalid-Parentheses"><a href="#301-Remove-Invalid-Parentheses" class="headerlink" title="301 Remove Invalid Parentheses"></a>301 Remove Invalid Parentheses</h3><p>思路： bfs，暴力枚举每个删除的位置。dfs也可，但是还没掌握，太精妙了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">public boolean isValid(String s)&#123;</div><div class="line">        char []ss=s.toCharArray();</div><div class="line">        int cnt=0;</div><div class="line">        for(char c:ss)&#123;</div><div class="line">            if(c==&apos;(&apos;)</div><div class="line">                cnt++;</div><div class="line">            else if(c==&apos;)&apos;)</div><div class="line">                cnt--;</div><div class="line">            if(cnt&lt;0)</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">        return cnt==0;</div><div class="line">    &#125;</div><div class="line">    public List&lt;String&gt; removeInvalidParentheses(String s) &#123;</div><div class="line">        List&lt;String&gt;res=new ArrayList&lt;&gt;();</div><div class="line">        if(isValid(s))&#123;</div><div class="line">            res.add(s);</div><div class="line">            return res;</div><div class="line">        &#125;</div><div class="line">        Queue&lt;String&gt;q=new LinkedList&lt;&gt;();</div><div class="line">        q.offer(s);</div><div class="line">        Map&lt;String,Boolean&gt;vis=new HashMap&lt;&gt;();</div><div class="line">        boolean next=true;</div><div class="line">        vis.put(s,true);</div><div class="line">        while(next &amp;&amp; !q.isEmpty())&#123;</div><div class="line">            int size=q.size();</div><div class="line">            while(size -- &gt;0)&#123;</div><div class="line">                String top = q.poll();</div><div class="line">                int len =top.length();</div><div class="line">                for(int i=0;i&lt;len;++i)&#123;</div><div class="line">                    if(s.charAt(i)==&apos;(&apos;||s.charAt(i)==&apos;)&apos;)&#123;</div><div class="line">                        String sub = top.substring(0,i)+top.substring(i+1);</div><div class="line">                        if(!vis.containsKey(sub))&#123;</div><div class="line">                            vis.put(sub,true);</div><div class="line">                            q.offer(sub);</div><div class="line">                            if(isValid(sub))&#123;</div><div class="line">                                next=false;</div><div class="line">                                res.add(sub);</div><div class="line">                            &#125;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        return res;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="337-House-Robber-III"><a href="#337-House-Robber-III" class="headerlink" title="337 House Robber III"></a>337 House Robber III</h3><p>思路： dfs 返回一个长度为2的数组，一个代表rob了当前node，一个代表没有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public int[]dfsRob(TreeNode root)&#123;</div><div class="line">        if(root==null)</div><div class="line">            return new int[]&#123;0,0&#125;;</div><div class="line">        int []res=new int[2];</div><div class="line">        //res[0] rob root; res[1] not rob root;</div><div class="line">        int []l = dfsRob(root.left);</div><div class="line">        int []r =dfsRob(root.right);</div><div class="line">        res[0]=l[1]+r[1]+root.val;</div><div class="line">        //好好想想，没选中当前node，不代表最大值一定是选左子节点，右子节点。</div><div class="line">        res[1]=Math.max(l[0],l[1])+Math.max(r[0],r[1]);</div><div class="line">        return res;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    public int rob(TreeNode root) &#123;</div><div class="line">        int []res=dfsRob(root);</div><div class="line">        return Math.max(res[0],res[1]);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="339-Nested-List-Weight-Sum"><a href="#339-Nested-List-Weight-Sum" class="headerlink" title="339 Nested List Weight Sum"></a>339 Nested List Weight Sum</h3><p>思路：普通的level by level 求和</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public void dfs(List&lt;NestedInteger&gt;nestedList,int[]res,int level)&#123;</div><div class="line">        int n=nestedList.size();</div><div class="line">        for(int i=0;i&lt;n;++i)&#123;</div><div class="line">            if(nestedList.get(i).isInteger())&#123;</div><div class="line">                res[0]+=level*nestedList.get(i).getInteger();</div><div class="line">            &#125;else&#123;</div><div class="line">                dfs(nestedList.get(i).getList(),res,level+1);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    public int depthSum(List&lt;NestedInteger&gt; nestedList) &#123;</div><div class="line">        int []res=new int[1];</div><div class="line">        dfs(nestedList,res,1);</div><div class="line">        return res[0];</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/dfs/">dfs</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/07/23/BFSQuestions/">
+        <span class="next-text nav-default">BFSQuestions</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wangtaoo665@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Tao</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/08/01/DFSQuestions/';
+        this.page.identifier = '2017/08/01/DFSQuestions/';
+        this.page.title = 'DFSQuestions';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//taobupt.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            Read more..
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

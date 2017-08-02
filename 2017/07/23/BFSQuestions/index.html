@@ -42,7 +42,7 @@
 <meta property="og:site_name" content="Stewart">
 <meta property="og:description" content="bfs questions review">
 <meta property="og:image" content="https://lh3.googleusercontent.com/RlEdIBHmvtJYrCdt4QOs3u21KcLmUZBoNYpvbY-CRkN6W2giTU9nMR68LX6EOYNCYfJb97nxn_vNTNi-zfPnxIxoexH6QyeW9jDdDvM6qOu_BSvUEdGgIjvFei3LSR_tbW33jDH0iQ">
-<meta property="og:updated_time" content="2017-07-24T06:22:38.000Z">
+<meta property="og:updated_time" content="2017-08-02T05:02:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BFSQuestions">
 <meta name="twitter:description" content="bfs questions review">
@@ -244,7 +244,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Review"><span class="toc-text">Review</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#199-Binary-Tree-Right-side-View"><span class="toc-text">199 Binary Tree Right side View</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Expectations"><span class="toc-text">Expectations</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Review"><span class="toc-text">Review</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Expectations"><span class="toc-text">Expectations</span></a></li></ol>
     </div>
   </div>
 
@@ -256,7 +256,7 @@
 <ul>
 <li>199 Binary Tree Right Side View</li>
 </ul>
-<h3 id="199-Binary-Tree-Right-side-View"><a href="#199-Binary-Tree-Right-side-View" class="headerlink" title="199 Binary Tree Right side View"></a>199 Binary Tree Right side View</h3><p>思路： dfs 和  bfs，其实和level order的两种差不多</p>
+<p>s<br>思路： dfs 和  bfs，其实和level order的两种差不多</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">public void dfs(TreeNode node,List&lt;Integer&gt;res,int level)&#123;</div><div class="line">        if(node==null)</div><div class="line">            return;</div><div class="line">        if(level&gt;=res.size())</div><div class="line">            res.add(node.val);</div><div class="line">        dfs(node.right,res,level+1);</div><div class="line">        dfs(node.left,res,level+1);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    public List&lt;Integer&gt; rightSideView(TreeNode root) &#123;</div><div class="line">        List&lt;Integer&gt;res=new ArrayList&lt;&gt;();</div><div class="line">        dfs(root,res,0);</div><div class="line">        return res;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">    public List&lt;Integer&gt;rightSideViewByBFS(TreeNode root)&#123;</div><div class="line">        List&lt;Integer&gt;res=new ArrayList&lt;&gt;();</div><div class="line">        if(root==null)</div><div class="line">            return res;</div><div class="line">        Queue&lt;TreeNode&gt;q=new LinkedList&lt;&gt;();</div><div class="line">        while(!q.isEmpty())&#123;</div><div class="line">            int size= q.size();</div><div class="line">            while(size --&gt;0)&#123;</div><div class="line">                TreeNode top=q.poll();</div><div class="line">                if(size==0)</div><div class="line">                    res.add(top.val);</div><div class="line">                if(top.left!=null)</div><div class="line">                    q.offer(top.left);</div><div class="line">                if(top.right!=null)</div><div class="line">                    q.offer(top.right);</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return res;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <hr>
 <h1 id="Expectations"><a href="#Expectations" class="headerlink" title="Expectations"></a>Expectations</h1><hr>
@@ -310,6 +310,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2017/08/01/DFSQuestions/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">DFSQuestions</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
     
       <a class="next" href="/2017/07/23/BacktrackingQuestions/">
