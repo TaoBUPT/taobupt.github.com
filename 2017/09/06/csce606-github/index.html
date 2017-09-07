@@ -41,7 +41,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/06/csce606-github/index.html">
 <meta property="og:site_name" content="Stewart">
 <meta property="og:description" content="csce606 github set up">
-<meta property="og:updated_time" content="2017-09-07T06:16:50.000Z">
+<meta property="og:updated_time" content="2017-09-07T06:18:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="csce606_github">
 <meta name="twitter:description" content="csce606 github set up">
@@ -239,18 +239,23 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一次提交"><span class="toc-text">第一次提交</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#以后的提交"><span class="toc-text">以后的提交</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用git命令"><span class="toc-text">常用git命令</span></a>
+    </div>
+  </div>
+
 
     <div class="post-content">
       
         <p>在已经建好organization 和 team的情况下，可以按照如下步骤进行协同开发</p>
 <hr>
 <a id="more"></a>
-<p>####第一次提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">git clone https://github.tamu.edu/HelloWorld/TA_Assignment_System.git</div><div class="line"></div><div class="line">// change to dev branch</div><div class="line">git checkout dev</div><div class="line"></div><div class="line">//check what&apos;s current branch</div><div class="line">git branch</div><div class="line"></div><div class="line">//after add or modified some files</div><div class="line">git add file1.txt file2.txt file3.txt</div><div class="line"></div><div class="line">//check file status </div><div class="line">git status</div><div class="line"></div><div class="line">//pull the latest dev version from remote</div><div class="line">//you should always pull before push</div><div class="line">git pull origin dev</div><div class="line"></div><div class="line">//commit files and add explanation</div><div class="line">git commit -m &quot;your explanation&quot;</div><div class="line"></div><div class="line">//push to remote</div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
-<p>####以后的提交<br>只需要上面步骤的后面几步了</p>
+<h4 id="第一次提交"><a href="#第一次提交" class="headerlink" title="第一次提交"></a>第一次提交</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">git clone https://github.tamu.edu/HelloWorld/TA_Assignment_System.git</div><div class="line"></div><div class="line">// change to dev branch</div><div class="line">git checkout dev</div><div class="line"></div><div class="line">//check what&apos;s current branch</div><div class="line">git branch</div><div class="line"></div><div class="line">//after add or modified some files</div><div class="line">git add file1.txt file2.txt file3.txt</div><div class="line"></div><div class="line">//check file status </div><div class="line">git status</div><div class="line"></div><div class="line">//pull the latest dev version from remote</div><div class="line">//you should always pull before push</div><div class="line">git pull origin dev</div><div class="line"></div><div class="line">//commit files and add explanation</div><div class="line">git commit -m &quot;your explanation&quot;</div><div class="line"></div><div class="line">//push to remote</div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
+<h4 id="以后的提交"><a href="#以后的提交" class="headerlink" title="以后的提交"></a>以后的提交</h4><p>只需要上面步骤的后面几步了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git add file1.txt file2.txt file3.txt</div><div class="line"></div><div class="line">git pull origin dev</div><div class="line"></div><div class="line">git commit -m &quot;your explanation&quot;</div><div class="line"></div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
-<p>##常用git命令</p>
-<hr>
+<h2 id="常用git命令"><a href="#常用git命令" class="headerlink" title="常用git命令"></a>常用git命令</h2><hr>
 <ul>
 <li>add/delete files</li>
 </ul>
@@ -304,6 +309,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2017/09/07/mac-ruby-setup/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">mac_ruby_setup</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
     
       <a class="next" href="/2017/08/12/Detail/">
