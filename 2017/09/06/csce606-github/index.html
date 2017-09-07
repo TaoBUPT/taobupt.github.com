@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="blogs"/>
+  <meta name="description" content="csce606_github"/>
 
 
 
+
+  <meta name="keywords" content="git," />
 
 
 
@@ -29,18 +31,20 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/"/>
+<link rel="canonical" href="http://yoursite.com/2017/09/06/csce606-github/"/>
 
 
-<meta name="description" content="blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Stewart">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="在已经建好organization 和 team的情况下，可以按照如下步骤进行协同开发 ####第一次提交 1234567891011121314151617181920212223git clone https://github.tamu.edu/HelloWorld/TA_Assignment_System.git// change to dev branchgit checkout dev/">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="csce606_github">
+<meta property="og:url" content="http://yoursite.com/2017/09/06/csce606-github/index.html">
 <meta property="og:site_name" content="Stewart">
-<meta property="og:description" content="blogs">
+<meta property="og:description" content="在已经建好organization 和 team的情况下，可以按照如下步骤进行协同开发 ####第一次提交 1234567891011121314151617181920212223git clone https://github.tamu.edu/HelloWorld/TA_Assignment_System.git// change to dev branchgit checkout dev/">
+<meta property="og:updated_time" content="2017-09-07T06:13:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stewart">
-<meta name="twitter:description" content="blogs">
+<meta name="twitter:title" content="csce606_github">
+<meta name="twitter:description" content="在已经建好organization 和 team的情况下，可以按照如下步骤进行协同开发 ####第一次提交 1234567891011121314151617181920212223git clone https://github.tamu.edu/HelloWorld/TA_Assignment_System.git// change to dev branchgit checkout dev/">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
@@ -79,7 +83,7 @@
 
 
 
-    <title> Stewart </title>
+    <title> csce606_github · Stewart </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -217,14 +221,12 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
-      
+  
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2017/09/06/csce606-github/">csce606_github</a>
+          csce606_github
         
       </h1>
 
@@ -240,11 +242,7 @@
 
     <div class="post-content">
       
-        
-        
-
-        
-          <p>在已经建好organization 和 team的情况下，可以按照如下步骤进行协同开发</p>
+        <p>在已经建好organization 和 team的情况下，可以按照如下步骤进行协同开发</p>
 <p>####第一次提交</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">git clone https://github.tamu.edu/HelloWorld/TA_Assignment_System.git</div><div class="line"></div><div class="line">// change to dev branch</div><div class="line">git checkout dev</div><div class="line"></div><div class="line">//check what&apos;s current branch</div><div class="line">git branch</div><div class="line"></div><div class="line">//after add or modified some files</div><div class="line">git add file1.txt file2.txt file3.txt</div><div class="line"></div><div class="line">//check file status </div><div class="line">git status</div><div class="line"></div><div class="line">//pull the latest dev version from remote</div><div class="line">//you should always pull before push</div><div class="line">git pull origin dev</div><div class="line"></div><div class="line">//commit files and add explanation</div><div class="line">git commit -m &quot;your explanation&quot;</div><div class="line"></div><div class="line">//push to remote</div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
 <p>####以后的提交<br>只需要上面步骤的后面几步了</p>
@@ -261,275 +259,78 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//list all local branches</div><div class="line">git branch</div><div class="line"></div><div class="line">//list all remote branches</div><div class="line">git branch -r</div><div class="line"></div><div class="line">//list all local &amp; remote branches</div><div class="line">git branch -a</div><div class="line"></div><div class="line">//create a new branch, but remain in the original branch</div><div class="line">git branch [branch-name]</div><div class="line"></div><div class="line">//create a new branch and change to new branch</div><div class="line">git checkout -b [branch]</div><div class="line"></div><div class="line">//change to specific branch</div><div class="line">git checkout [branch-name]</div></pre></td></tr></table></figure>
 <hr>
 
-        
       
     </div>
 
     
-
-    
-
-  </article>
-
-    
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/08/12/Detail/">Detail</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Aug 12, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
       
-        
-        
 
-        
-          
-        
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
       
     </div>
+  </div>
 
     
 
     
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
+      <footer class="post-footer">
         
-          <a class="post-link" href="/2017/08/01/DFSQuestions/">DFSQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Aug 1, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>dfs questions review</p>
-          <div class="read-more">
-            <a href="/2017/08/01/DFSQuestions/" class="read-more-link">Read more..</a>
+          <div class="post-tags">
+            
+              <a href="/tags/git/">git</a>
+            
           </div>
         
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
         
-          <a class="post-link" href="/2017/07/23/BFSQuestions/">BFSQuestions</a>
         
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Jul 23, 2017
-        </span>
-      </div>
-    </header>
-
+  <nav class="post-nav">
     
     
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>bfs questions review</p>
-          <div class="read-more">
-            <a href="/2017/07/23/BFSQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/07/23/BacktrackingQuestions/">BacktrackingQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Jul 23, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>backtracking questions review</p>
-          <div class="read-more">
-            <a href="/2017/07/23/BacktrackingQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/07/16/stackQuestions/">stackQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Jul 16, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>stack questions review</p>
-          <div class="read-more">
-            <a href="/2017/07/16/stackQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/07/16/countdown/">countdown</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Jul 16, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>countdown</p>
-          <div class="read-more">
-            <a href="/2017/07/16/countdown/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
+      <a class="next" href="/2017/08/12/Detail/">
+        <span class="next-text nav-default">Detail</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>  
       </main>
@@ -604,6 +405,24 @@
     </div>
 
     
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/09/06/csce606-github/';
+        this.page.identifier = '2017/09/06/csce606-github/';
+        this.page.title = 'csce606_github';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//taobupt.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
 
 
     
