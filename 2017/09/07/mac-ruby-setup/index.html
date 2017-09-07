@@ -41,7 +41,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/07/mac-ruby-setup/index.html">
 <meta property="og:site_name" content="Stewart">
 <meta property="og:description" content="csce606 mac ruby setup">
-<meta property="og:updated_time" content="2017-09-07T06:44:17.000Z">
+<meta property="og:updated_time" content="2017-09-07T07:01:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac_ruby_setup">
 <meta name="twitter:description" content="csce606 mac ruby setup">
@@ -239,12 +239,22 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#mac-install-ruby"><span class="toc-text">mac install ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li></ol>
+    </div>
+  </div>
+
 
     <div class="post-content">
       
-        <hr>
+        <h3 id="mac-install-ruby"><a href="#mac-install-ruby" class="headerlink" title="mac install ruby"></a>mac install ruby</h3><hr>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">brew install rbenv ruby-build</div><div class="line"></div><div class="line"># Add rbenv to bash so that it loads every time you open a terminal</div><div class="line">echo &apos;if which rbenv &gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi&apos; &gt;&gt; ~/.bash_profile</div><div class="line">source ~/.bash_profile</div><div class="line"></div><div class="line"># Install Ruby</div><div class="line">rbenv install 2.4.1</div><div class="line">rbenv global 2.4.1</div><div class="line">ruby -v</div><div class="line"></div><div class="line">#you should install the Command Line tools as they aren&apos;t installed by default (xcode)</div><div class="line"></div><div class="line">xcode-select --install</div><div class="line"></div><div class="line">gem install rails -v 5.1.3</div><div class="line"></div><div class="line">rbenv rehash</div><div class="line"></div><div class="line">rails -v</div><div class="line"></div><div class="line"></div><div class="line"># create new application</div><div class="line">rails new blog</div><div class="line"></div><div class="line"># if webpacker is not installed</div><div class="line">brew install yarn</div><div class="line">rails webpacker:install</div><div class="line"></div><div class="line"># run server</div><div class="line">rails server</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">brew install rbenv ruby-build</div><div class="line"></div><div class="line"># Add rbenv to bash so that it loads every time you open a terminal</div><div class="line">echo &apos;if which rbenv &gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi&apos; &gt;&gt; ~/.bash_profile</div><div class="line">source ~/.bash_profile</div><div class="line"></div><div class="line"># Install Ruby</div><div class="line">rbenv install 2.4.1</div><div class="line">rbenv global 2.4.1</div><div class="line">ruby -v</div><div class="line"></div><div class="line"># you should install the Command Line tools as they aren&apos;t installed by default (xcode)</div><div class="line"></div><div class="line">xcode-select --install</div><div class="line"></div><div class="line">gem install rails -v 5.1.3</div><div class="line"></div><div class="line">rbenv rehash</div><div class="line"></div><div class="line">rails -v</div><div class="line"></div><div class="line"></div><div class="line"># create new application</div><div class="line">rails new blog</div><div class="line"></div><div class="line"># if webpacker is not installed</div><div class="line">brew install yarn</div><div class="line">rails webpacker:install</div><div class="line"></div><div class="line"># run server</div><div class="line">rails server</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># start default web server: puma</div><div class="line">rails server</div></pre></td></tr></table></figure>
 
       
     </div>
