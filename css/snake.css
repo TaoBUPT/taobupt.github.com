@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding:0;
+    font-size: 16px;
+}
+
+.board {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px;
+    background-color: black;
+}
+
+.pane {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    height: 70%;
+    width: 90%;
+    background-color: black;
+}
+
+.block {
+    position: absolute;
+    background-color: green;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.instructions{
+    position: absolute;
+    top: 70%;
+    left: 5px;
+    color:red;
+}
+
+.food {
+    position: absolute;
+    background-color: red;
+}
+
+.message {
+    position: absolute;
+    height: 400px;
+    width: 800px;
+    top: 30%;
+    left:25%;
+    line-height: 400px;
+    font-size: 200px;
+    text-align: center;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    /*background-color: green;*/
+    color: yellow;
+}
