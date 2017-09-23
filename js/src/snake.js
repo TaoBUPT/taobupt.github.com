@@ -164,7 +164,7 @@ function Snake(){
 
     this.resizeWindow = function () {
 
-        var windowWidth = window.innerWidth * 1;
+        var windowWidth = window.innerWidth * 0.9;
         var windowHeight = window.innerHeight * 0.7;
         var board = document.getElementById("board");
         board.style.height =  Math.floor(windowHeight / _SIZE) * _SIZE;
