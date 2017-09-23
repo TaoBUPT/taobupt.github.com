@@ -5,18 +5,22 @@ body {
 }
 
 .board {
+    top: 0px;
+    left: 0px;
+    height: 70%;
+    width: 100%;
     position: absolute;
     box-sizing: border-box;
-    border: 1px;
+    border: 0px;
     background-color: black;
 }
 
 .pane {
     position: absolute;
-    top: 0;
-    left: 1%;
+    top: 0px;
+    left: 0px;
     height: 70%;
-    width: 98%;
+    width: 100%;
     background-color: black;
 }
 
@@ -30,7 +34,7 @@ body {
 .instructions{
     position: absolute;
     top: 70%;
-    left: 5px;
+    left: 0;
     color:red;
 }
 
@@ -41,9 +45,9 @@ body {
 
 .message {
     position: absolute;
-    height: 400px;
-    width: 800px;
-    top: 30%;
+    height: 300px;
+    width: 600px;
+    top: 20%;
     left:25%;
     line-height: 400px;
     font-size: 200px;

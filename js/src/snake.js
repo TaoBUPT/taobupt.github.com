@@ -1,8 +1,8 @@
 /**
  * Created by Tao on 9/22/2017.
  */
-function Snake(){
-    var _SPEED = 150;  // milliseconds between update
+ function Snake(){
+    var _SPEED = 100;  // milliseconds between update
     var _SIZE = 15;    // block size
     var _LENGTH = 2;   // length of the initial snake
     var running;
@@ -164,9 +164,12 @@ function Snake(){
 
     this.resizeWindow = function () {
 
-        var windowWidth = window.innerWidth * 0.98;
+        var windowWidth = window.innerWidth ;
         var windowHeight = window.innerHeight * 0.7;
         var board = document.getElementById("board");
+        //var pane = document.getElementById("pane");
+        //pane.style.height =  Math.floor(windowHeight / _SIZE) * _SIZE;
+        //pane.style.width =  Math.floor(windowWidth / _SIZE) * _SIZE;
         board.style.height =  Math.floor(windowHeight / _SIZE) * _SIZE;
         board.style.width =  Math.floor(windowWidth / _SIZE) * _SIZE;
         height = Math.floor(windowHeight / _SIZE);
