@@ -3,6 +3,140 @@
   
     
     <entry>
+      <title><![CDATA[database]]></title>
+      <url>/2017/10/09/database/</url>
+      <content type="html"><![CDATA[<h2 id="Transaction"><a href="#Transaction" class="headerlink" title="Transaction"></a>Transaction</h2><h4 id="defination"><a href="#defination" class="headerlink" title="defination"></a>defination</h4><p>transaction is a sequence of operations and performed as a signle logic unit of work</p>
+<h4 id="two-main-purposes"><a href="#two-main-purposes" class="headerlink" title="two main purposes"></a>two main purposes</h4><ul>
+<li><p>To provide reliable units of work that allow correct recovery from failures and keep a database consistent even in cases of system failure</p>
+</li>
+<li><p>To provide isolation between programs accessing a database concurrently</p>
+</li>
+</ul>
+<h4 id="four-properties"><a href="#four-properties" class="headerlink" title="four properties"></a>four properties</h4><ul>
+<li><strong>Atomic</strong>: requires that each transaction be “all or nothing”: if one part of the transaction fails, then the entire transaction fails, and the database state is left unchanged. </li>
+<li><strong>Consistent</strong>: ensures that any transaction will bring the database from one valid state to another. Integrity constraints must be maintained so that the database is consistent before and after the transaction.</li>
+<li><strong>Isolated</strong>: ensures that multiple transactions can occur concurrently without leading to inconsistency of database state</li>
+<li><strong>Durable</strong>: ensures that once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even is system failure occurs</li>
+</ul>
+<h4 id="transaction-exception"><a href="#transaction-exception" class="headerlink" title="transaction exception"></a>transaction exception</h4><ul>
+<li><strong>Dirty read</strong>: occurs when a transaction is allowed to read data from a row that has been modified by another running transaction and not yet committed</li>
+<li><strong>Non-repeatable reads</strong>: when during the course of a transaction, a row is retrieved twice and the values within the row differ between reads</li>
+<li><strong>Phantom reads</strong>: occurs when, in the course of a transaction, two identical queries are executed, and the collection of rows returned by the second query is different from the first.</li>
+<li><strong>Lost update</strong>: A second transaction writes a second value of a data-item (datum) on top of a first value written by a first concurrent transaction, and the first value is lost to other transactions running concurrently which need, by their precedence, to read the first value</li>
+</ul>
+<h4 id="four-isolation-level"><a href="#four-isolation-level" class="headerlink" title="four isolation level"></a>four isolation level</h4><ul>
+<li><strong>Serializable</strong>:  serializability requires read and write locks (acquired on selected data) to be released at the end of the transaction. Also range-locks must be acquired when a SELECT query uses a ranged WHERE clause</li>
+<li><strong>Repeatable reads</strong>:  keeps read and write locks (acquired on selected data) until the end of the transaction. However, range-locks are not managed, so phantom reads can occur.</li>
+<li><strong>Read committed</strong>: keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the SELECT operation is performed.</li>
+<li><strong>Read uncommitted</strong>: This is the lowest isolation level. In this level, dirty reads are allowed, so one transaction may see not-yet-committed changes made by other transactions.</li>
+</ul>
+<h4 id="locks"><a href="#locks" class="headerlink" title="locks"></a>locks</h4><ul>
+<li><strong>Exclusive locks</strong>: Exclusive locks are, as the name implies, exclusively held by a single entity, usually for the purpose of writing to the record. If the locking schema was represented by a list, the holder list would contain only one entry.</li>
+<li><strong>Shared locks</strong>: Shared locks differ from exclusive locks in that the holder list can contain multiple entries. Shared locks allow all holders to read the contents of the record knowing that the record cannot be changed until after the lock has been released by all holders</li>
+</ul>
+<hr>
+<h2 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h2><h4 id="defination-1"><a href="#defination-1" class="headerlink" title="defination"></a>defination</h4><p>A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX index_name</div><div class="line">    [index_type]</div><div class="line">    ON tbl_name (index_col_name,...)</div><div class="line">    [index_option]</div><div class="line">    [algorithm_option | lock_option] ...</div><div class="line"></div><div class="line">index_col_name:</div><div class="line">    col_name [(length)] [ASC | DESC]</div><div class="line"></div><div class="line">index_option:</div><div class="line">    KEY_BLOCK_SIZE [=] value</div><div class="line">  | index_type</div><div class="line">  | WITH PARSER parser_name</div><div class="line">  | COMMENT &apos;string&apos;</div><div class="line"></div><div class="line">index_type:</div><div class="line">    USING &#123;BTREE | HASH&#125;</div><div class="line"></div><div class="line">algorithm_option:</div><div class="line">    ALGORITHM [=] &#123;DEFAULT|INPLACE|COPY&#125;</div><div class="line"></div><div class="line">lock_option:</div><div class="line">    LOCK [=] &#123;DEFAULT|NONE|SHARED|EXCLUSIVE&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="indices"><a href="#indices" class="headerlink" title="indices"></a>indices</h4><ul>
+<li><strong>Ordered indices</strong>: Indices are based on a sorted ordering of the values </li>
+<li><strong>Hash indices</strong>: Indices are based on the values being distributed uniformly across a range of buckets. The buckets to which a value is assigned is determined by function called a hash function.</li>
+</ul>
+<h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><ul>
+<li>What are advantages of DBMS over traditional file based systems?<ul>
+<li>Data redundancy and inconsistency</li>
+<li>Difﬁculty in accessing data</li>
+<li>Data isolation – multiple ﬁles and formats</li>
+<li>Integrity problems</li>
+<li>Atomicity of updates</li>
+<li>Concurrent access by multiple users</li>
+<li>Security problems</li>
+</ul>
+</li>
+<li><p>What are super, primary, candidate and foreign keys?</p>
+<ul>
+<li>a superkey is a attribute set which can identify a row</li>
+<li>a candidate key is minimal superkey</li>
+<li>a primary key is one of the candidate keys</li>
+<li>foreign key is a field (or collection of fields) in one table that uniquely identifies a row of another table</li>
+</ul>
+</li>
+<li><p>What is the difference between primary key and unique constraints?</p>
+<ul>
+<li>Primary key cannot have NULL value, the unique constraints can have NULL values. There is only one primary key in a table, but there can be multiple unique constrains</li>
+</ul>
+</li>
+<li><p>What is database normalization?</p>
+<ul>
+<li>It is a process of analyzing the given relation schemas based on their functional dependencies and primary keys to achieve the following desirable properties: Minimizing Redundancy, Minimizing the Insertion, Deletion, And Update Anomalies</li>
+</ul>
+</li>
+<li><p>What is the difference between having and where clause?</p>
+<ul>
+<li>HAVING is used to specify a condition for a group or an aggregate function used in select statement. The WHERE clause selects before grouping. The HAVING clause selects rows after grouping. Unlike HAVING clause, the WHERE clause cannot contain aggregate functions</li>
+<li><strong>SELECT name, section FROM tbl GROUP BY name, section HAVING COUNT(*) &gt; 1</strong></li>
+</ul>
+</li>
+<li><p>What is Join?</p>
+<ul>
+<li>An SQL Join is used to combine data from two or more tables, based on a common field between them</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT StudentCourse.CourseID, Student.StudentName</div><div class="line">      FROM StudentCourse</div><div class="line">      INNER JOIN Customers </div><div class="line">      ON StudentCourse.EnrollNo = Student.EnrollNo</div><div class="line">      ORDER BY StudentCourse.CourseID;</div></pre></td></tr></table></figure>
+</li>
+<li><p>full join<br><img src="https://lh3.googleusercontent.com/4uK2KdyZQ4faAdOZSNHV-wQlXGRsSNY1mA2HKtGFwuSoiK4lm3GdHsA3TE-C1gxl-rbpyeJ0-IrrAUQTsJp3HL908_zTRp-TnnfQ3_OgBIVquemXkoT1v0MFZSzJMDu7kxtCB7OyBw" alt="full join"></p>
+</li>
+<li>left join<br><img src="https://lh3.googleusercontent.com/g5STD0f-sAMFWdPt_qz-PejAavBt5X_aJTRcY4ehkgeZL2-LGF1hCcjaTcoqHQWywoa7hveb4hQWiRNH8duj2p7kmJJSXwBE5FLDyPlyuXY1_n0uvUPtmCIuDBJ82MrBY4l_DqLsNg" alt="left join"></li>
+<li>right join<br><img src="https://lh3.googleusercontent.com/ryjSfmU2QkL6eujCQwk8ypZ_VuoEWZ887PvZWaJN2w3NHyMvFTrPXX7iMi5148ygZjPwzGg6fDu2tIfzyTehXQ3ysofB_c__1D3k-pCGtcUgA8DBZ9CFk-mzub7CGOCwXhDVAT1ZLA" alt="right join"></li>
+<li>inner join<br><img src="https://lh3.googleusercontent.com/3OZv-4kbUo9Z00aHDEEuvS8iuhS3BnM90qMmaa53j3G_kvMeC6kgm_4JE5qZS-kqJn40KM5bnq9_hvkEjuaS3pBlVSU49Juo6DS3bxEiussyzY3jFntof1_HNVKh2AlMr8DksikDOw" alt="inner join"></li>
+</ul>
+</li>
+<li><p>What is a view in SQL? How to create one</p>
+<ul>
+<li>A view is a virtual table based on the result-set of an SQL statement. We can create using create view syntax.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  CREATE VIEW view_name AS</div><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name</div><div class="line">WHERE condition</div></pre></td></tr></table></figure>
+</li>
+<li><p>What is a Trigger?</p>
+<ul>
+<li>A Trigger is a code that associated with insert, update or delete operations. The code is executed automatically whenever the associated query is executed on a table. Triggers can be useful to maintain integrity in database.</li>
+</ul>
+</li>
+<li><p>What is a stored procedure?</p>
+<ul>
+<li>It contains a set of operations that are commonly used in an application to do some common database tasks.</li>
+</ul>
+</li>
+<li><p>What is the difference between Trigger and Stored Procedure?</p>
+<ul>
+<li>Unlike Stored Procedures, Triggers cannot be called directly. They can only be associated with queries.</li>
+</ul>
+</li>
+<li><p>What are clustered and non-clustered Indexes?</p>
+<ul>
+<li>Clustered indexes is the index according to which data is physically stored on disk. Therefore, only one clustered index can be created on a given database table.<br>Non-clustered indexes don’t define physical ordering of data, but logical ordering. Typically, a tree is created whose leaf point to disk records. B-Tree or B+ tree are used for this purpos</li>
+</ul>
+</li>
+<li><p>Query to find 2nd highest salary of an employee?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select min(price) from (SELECT Price FROM Products order by price desc limit 2);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> database </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> database </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[InterestingQuestions]]></title>
       <url>/2017/09/16/InterestingQuestions/</url>
       <content type="html"><![CDATA[<p>整理了一些很有趣的问题</p>
