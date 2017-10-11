@@ -3,6 +3,209 @@
   
     
     <entry>
+      <title><![CDATA[os]]></title>
+      <url>/2017/10/10/os/</url>
+      <content type="html"><![CDATA[<h2 id="Process-vs-Thread"><a href="#Process-vs-Thread" class="headerlink" title="Process vs Thread"></a>Process vs Thread</h2><p><strong>Process</strong>: An executing instance of a program is called a process.</p>
+<p><strong>Thread</strong>: Thread is a lightweight thread(A thread is a subset of the process.)</p>
+<p><strong>diff</strong>:</p>
+<ul>
+<li>Threads share the address space of the process that created it; processes have their own address space.</li>
+<li>Threads have direct access to the data segment of its process; processes have their own copy of the data segment of the parent process.</li>
+<li>Threads can directly communicate with other threads of its process; processes must use interprocess communication to communicate with sibling processes.</li>
+<li>Threads have almost no overhead; processes have considerable overhead. context switch</li>
+<li>New threads are easily created; new processes require duplication of the parent process.</li>
+<li>Changes to the main thread (cancellation, priority change, etc.) may affect the behavior of the other threads of the process; changes to the parent process do not affect child processes.</li>
+</ul>
+<hr>
+<h2 id="Different-type-of-thread"><a href="#Different-type-of-thread" class="headerlink" title="Different type of thread"></a>Different type of thread</h2><table>
+<thead>
+<tr>
+<th>User level thread</th>
+<th>Kernel level thread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User thread are implemented by users</td>
+<td>Kernel threads are implemented by OS </td>
+</tr>
+<tr>
+<td>OS doesn’t recognized user level threads</td>
+<td>Kernel threads are recognized by OS</td>
+</tr>
+<tr>
+<td>implementation of User threads is easy</td>
+<td>implementation of kernel thread is complicated</td>
+</tr>
+<tr>
+<td>context switch time is less</td>
+<td>context switch time is more</td>
+</tr>
+<tr>
+<td>context switch requres no hardware support</td>
+<td>hardware support is needed</td>
+</tr>
+<tr>
+<td>if one user level thread perform blocking operation then entire process will be blocked</td>
+<td>if one kernel thread perfrom blocking operation then another thread can continue execution</td>
+</tr>
+<tr>
+<td>Example: JAVA thread, POSIX threads</td>
+<td>windows solaris</td>
+</tr>
+</tbody>
+</table>
+<h2 id="context-switch"><a href="#context-switch" class="headerlink" title="context switch"></a>context switch</h2><p>a context switch is the process of storing and restoring the state (more specifically, the execution context) of a process or thread so that execution can be resumed from the same point at a later time. This enables multiple processes to share a single CPU and is an essential feature of a multitasking operating system<br><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Context_switch.png" alt="context Switch"></p>
+<h2 id="interrupt-and-system-call"><a href="#interrupt-and-system-call" class="headerlink" title="interrupt and system call"></a>interrupt and system call</h2><p><strong>interrupt</strong>: an interrupt is a signal to the processor emitted by hardware or software indicating an event that needs immediate attention.</p>
+<ul>
+<li>haredware interrup<ul>
+<li>keyboard, mouse</li>
+</ul>
+</li>
+<li>software interrupt<ul>
+<li>exception, divide by zero</li>
+<li>services from device drivers</li>
+</ul>
+</li>
+</ul>
+<p><strong>system call</strong>: a system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.</p>
+<p>when a process make a system call, which will cause an interruption and the process will change to kernal mode.</p>
+<p><strong>kernal mode</strong><br>In Kernel mode, the executing code has complete and unrestricted access to the underlying hardware. It can execute any CPU instruction and reference any memory address. Kernel mode is generally reserved for the lowest-level, most trusted functions of the operating system. Crashes in kernel mode are catastrophic; they will halt the entire PC.</p>
+<p><strong>user mode</strong><br>In User mode, the executing code has no ability to directly access hardware or reference memory. Code running in user mode must delegate to system APIs to access hardware or memory. Due to the protection afforded by this sort of isolation, crashes in user mode are always recoverable. Most of the code running on your computer will execute in user mode.</p>
+<h2 id="concurrent-technologies"><a href="#concurrent-technologies" class="headerlink" title="concurrent technologies"></a>concurrent technologies</h2><h3 id="thread"><a href="#thread" class="headerlink" title="thread"></a>thread</h3><ul>
+<li>An executing instance of a program</li>
+<li>text region, data region, code segment, stack region</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>Five states</strong></p>
+<ul>
+<li>created: by being loaded from a secondary storage device</li>
+<li>waiting: it waits for the scheduler to do a so-called context switch and load the process into the processor.</li>
+<li>running</li>
+<li>blocked: If a process needs to wait for a resource (wait for user input or file to open, for example), it is assigned the “blocked” state.</li>
+<li>terminated: Once the process finishes execution, or is terminated by the operating system, it is no longer needed.</li>
+</ul>
+</li>
+<li><p><strong>three schedulers</strong></p>
+<ul>
+<li><strong>Long-Term Scheduler</strong> (job scheduler) It selects processes from pool and loads them into memory for execution</li>
+<li><strong>Short-Term schduler</strong> (CPU scheduler) It selects those processes which are ready to execute</li>
+<li><strong>Medium-Term Scheduler</strong> (process swapping scheduler) It can re-introduce the process into memory and execution can be continued</li>
+</ul>
+</li>
+<li><p><strong>preemption &amp; non-preemption</strong></p>
+<ul>
+<li>Preemption is the act of temporarily interrupting a task being carried out by a computer system, without requiring its cooperation, and with the intention of resuming the task at a later time</li>
+<li>Once resources are allocated to a process, the process holds it till it completes its burst time or switches to waiting state.</li>
+</ul>
+</li>
+<li><p><strong>process schedule algorithms</strong></p>
+<ul>
+<li>FIFO or First Come, First Served (FCFS) Jobs are executed on first come, first serve basis; It is a non-preemptive scheduling algorithm; Easy to understand and implement; Poor in performance as average wait time is high.</li>
+<li>Short job first: Best approach to minimize waiting time; Easy to implement in Batch systems where required CPU time is known in advance; Impossible to implement in interactive systems where required CPU time is not knownThe processer should know in advance how much time process will take.</li>
+<li>Priority Based Scheduling: Priority scheduling is a non-preemptive algorithm and one of the most common scheduling algorithms in batch systems; Each process is assigned a priority. Process with highest priority is to be executed first and so on; Processes with same priority are executed on first come first served basis; Priority can be decided based on memory requirements, time requirements or any other resource requirement.</li>
+<li>Round Robin Scheduling: Round Robin is the preemptive process scheduling algorithm; Each process is provided a fix time to execute, it is called a quantum; Once a process is executed for a given time period, it is preempted and other process executes for a given time period; Context switching is used to save states of preempted processes</li>
+<li>Multiple-Level Queues Scheduling: Multiple queues are maintained for processes with common characteristics; Each queue can have its own scheduling algorithms; Priorities are assigned to each queue.</li>
+</ul>
+</li>
+</ul>
+<h2 id="critical-region-amp-resource"><a href="#critical-region-amp-resource" class="headerlink" title="critical region &amp; resource"></a>critical region &amp; resource</h2><p>In concurrent programming, concurrent accesses to shared resources can lead to unexpected or erroneous behavior, so parts of the program where the shared resource is accessed are protected. This protected section is the critical section or critical region.</p>
+<ul>
+<li>进入区:查看临界区是否可访问，如果可以访问，则转到步骤二，否则进程会被阻塞</li>
+<li>临界区:在临界区做操作</li>
+<li>退出区:清除临界区被占用的标志</li>
+<li><p>剩余区：进程与临界区不相关部分的代码</p>
+</li>
+<li><p>soltuions：</p>
+<ul>
+<li>Semaphore: p v operations</li>
+<li>mutex</li>
+</ul>
+</li>
+<li>Semaphore<ul>
+<li>wait: If the value of semaphore variable is not negative, decrement it by 1. If the semaphore variable is now negative, the process executing wait is blocked (i.e., added to the semaphore’s queue) until the value is greater or equal to 1. Otherwise, the process continues execution, having used a unit of the resource.</li>
+<li>signal: Increments the value of semaphore variable by 1. After the increment, if the pre-increment value was negative (meaning there are processes waiting for a resource), it transfers a blocked process from the semaphore’s waiting queue to the ready queue.</li>
+</ul>
+</li>
+</ul>
+<h2 id="deadlock"><a href="#deadlock" class="headerlink" title="deadlock"></a>deadlock</h2><p>two or more competing are wating each to release resources but none of them ever.</p>
+<ul>
+<li><p>four conditions</p>
+<ul>
+<li>Mutual exclusion: The resources involved must be unshareable</li>
+<li>Hold and wait: a process is currently holding at least one resource and requesting additional resources which are being held by other processes.</li>
+<li>No preemption: a resource can be released only voluntarily by the process holding it.</li>
+<li>Circular wait: each process must be waiting for a resource which is being held by another process, which in turn is waiting for the first process to release the resource</li>
+</ul>
+</li>
+<li><p>solution:</p>
+<ul>
+<li>Ostrich algorithm.</li>
+<li>allocate the resource dynamically (Bankers’ algorithm)</li>
+<li>detect deadlock and recover it</li>
+<li>break any conditon of above four condition</li>
+</ul>
+</li>
+</ul>
+<h2 id="Inter-process-communication"><a href="#Inter-process-communication" class="headerlink" title="Inter-process communication"></a>Inter-process communication</h2><ul>
+<li>pipe, message queue</li>
+<li>mutex semaphore, read write lock</li>
+<li>shared memeory</li>
+<li>RPC</li>
+</ul>
+<h2 id="memory-management"><a href="#memory-management" class="headerlink" title="memory management"></a>memory management</h2><p><img src="https://lh3.googleusercontent.com/LCsKGAxGHnyEs3EANY4n5P5ya_L5azYKGW7SIYW0x9kT6rjv4HDMJ1m28m_oLC9m-nv1d2TQhZeo9toGwMXvY8Gm5qDkan67_B7N44A1Z4Px79mbe14fVOY9wXLQDusVqZ4_u4OXCg" alt="MEMORY"></p>
+<ul>
+<li>virtual address: segment + segement offset</li>
+<li>logical address: a logical address is the address at which an item (memory cell, storage element, network host) appears to reside from the perspective of an executing application program. segment offset</li>
+<li>physical address</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/fDOjO-LWHUQYO6aN5fW4FSSyM1e915oLf-bxJEg4ik7K4x6bAB9ndIbOLIF4khm82xKcYTY1FsyAe4XaQGld7bWYdqeN1ZEsC8guRAYBfi9upifgV3K_ChfsOh0Yv1JVEemRet9rLQ" alt="map"></p>
+<p>首先拿到一个逻辑地址，然后拿这个逻辑地址的虚拟页号，到页表上去进行比对（没有TLB）的情况。如果比对存在，说明这个块已经被调入内存了，如果不在，则会产生缺页中断，缺页中断就会启动I/O，然后去外存调块</p>
+<hr>
+<p><strong>page replacement algorithms</strong></p>
+<ul>
+<li>FIFO</li>
+<li>LRU</li>
+<li>SUDO LRU</li>
+<li>LFU</li>
+</ul>
+<p><strong>disk schedule</strong></p>
+<ul>
+<li>Seek Time:time taken to locate the disk arm to a specified track where the data is to be read or write</li>
+<li>Rotational Latency: Rotational Latency is the time taken by the desired sector of disk to rotate into a position so that it can access the read/write heads</li>
+<li>Transfer Time: Transfer time is the time to transfer the data.</li>
+<li>Disk Access Time: the sum of above</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/7M3qBFqSKJfvj3cH8QWSvhHu9zw1v21cm74TlXJpPCmAb4udVkSJejbN8ZyA0u-XVNz5MN6AOb-i0cOWICj9XdtRqIsR3K31TGo5ZV1ntZRx6cvPV-NcV5V8fCfdGoe9uWcDcD39vA" alt="access time"></p>
+<p><strong>disk schedule algorithm</strong></p>
+<ul>
+<li><p>FCFS: FCFS is the simplest of all the Disk Scheduling Algorithms. In FCFS, the requests are addressed in the order they arrive in the disk queue</p>
+</li>
+<li><p>SSTF: In SSTF (Shortest Seek Time First), requests having shortest seek time are executed first. So, the seek time of every request is calculated in advance in queue and then they are scheduled according to their calculated seek time. As a result, the request near the disk arm will get executed first. SSTF is certainly an improvement over FCFS as it decreases the average response time and increases the throughput of system</p>
+</li>
+<li>SCAN: In SCAN algorithm the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk, it reverses its direction and again services the request arriving in its path. So, this algorithm works like an elevator and hence also known as elevator algorithm</li>
+<li>CSCAN: In SCAN algorithm, the disk arm again scans the path that has been scanned, after reversing its direction. So, it may be possible that too many requests are waiting at the other end or there may be zero or few requests pending at the scanned area.</li>
+<li>Look &amp; CLook</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> os </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> os </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[database]]></title>
       <url>/2017/10/09/database/</url>
       <content type="html"><![CDATA[<h2 id="Transaction"><a href="#Transaction" class="headerlink" title="Transaction"></a>Transaction</h2><h4 id="defination"><a href="#defination" class="headerlink" title="defination"></a>defination</h4><p>transaction is a sequence of operations and performed as a signle logic unit of work</p>
