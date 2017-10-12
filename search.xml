@@ -259,8 +259,9 @@
 </ul>
 </li>
 <li><p>what is the difference between the &gt;&gt; and &gt;&gt;&gt; operators?</p>
-</li>
-<li><p>the &gt;&gt; operator carries the sign bit when shifting right. The &gt;&gt;&gt; zero-fills bits that have been shifted out.</p>
+<ul>
+<li>the &gt;&gt; operator carries the sign bit when shifting right. The &gt;&gt;&gt; zero-fills bits that have been shifted out.</li>
+</ul>
 </li>
 </ul>
 <ul>
