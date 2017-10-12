@@ -5,8 +5,7 @@
     <entry>
       <title><![CDATA[JavaInterviewQuestions]]></title>
       <url>/2017/10/11/JavaInterviewQuestions/</url>
-      <content type="html"><![CDATA[<p>##interview questions</p>
-<ul>
+      <content type="html"><![CDATA[<h2 id="interview-questions"><a href="#interview-questions" class="headerlink" title="interview questions"></a>interview questions</h2><ul>
 <li><p>Exception</p>
 <ul>
 <li>unchecked exception: error(out of memory) and runtime exception(outof boundary)</li>
