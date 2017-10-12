@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="java questions review"/>
+
+
+
+
+  <meta name="keywords" content="java," />
+
+
+
+
+  <link rel="alternate" href="/default" title="Stewart">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/10/11/JavaInterviewQuestions/"/>
+
+
+<meta name="description" content="java questions review">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaInterviewQuestions">
+<meta property="og:url" content="http://yoursite.com/2017/10/11/JavaInterviewQuestions/index.html">
+<meta property="og:site_name" content="Stewart">
+<meta property="og:description" content="java questions review">
+<meta property="og:updated_time" content="2017-10-12T01:44:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaInterviewQuestions">
+<meta name="twitter:description" content="java questions review">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-83143113-1', 'auto');
+        ga('send', 'pageview');
+  </script>
+
+
+
+    <title> JavaInterviewQuestions · Stewart </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Stewart</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+      <a href="/game">
+        <li class="mobile-menu-item">
+          
+          
+            Game
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Stewart</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              Categories
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/game">
+            
+            
+              Game
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input" />
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          JavaInterviewQuestions
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Oct 11, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#other-questions"><span class="toc-text">other questions</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>##interview questions</p>
+<ul>
+<li><p>Exception</p>
+<ul>
+<li>unchecked exception: error(out of memory) and runtime exception(outof boundary)</li>
+<li>IO exception(socket, file not found)</li>
+</ul>
+</li>
+<li><p>Most important feature</p>
+<ul>
+<li>platform independent language: we can write and compile the java code in one platform and can execure the class in any other supported platform</li>
+<li>all java classes have same .class files, different platforms have different jvms to exectue.</li>
+</ul>
+</li>
+<li><p>difference between a JDK and JVM</p>
+<ul>
+<li>jdk contains tools needed to develop the java programs, and jre to run the programs</li>
+<li>jre( java runtime environment) = jvm (java virtual machine)+ java packages classes (util, math, lang)</li>
+<li>jvm provides a platform- independent way of executing code, which means compile once in any machine and run it any where</li>
+</ul>
+</li>
+<li><p>what is a pointer and does java support pointers?</p>
+<ul>
+<li>pointer is a variable to store the address. Imporper handling of pointers leads to memory leaks and reliability issues hence java doesn’t support the usage of pointers</li>
+</ul>
+</li>
+<li><p>what is the base class of all classes?<br>-java.lang.object</p>
+</li>
+<li><p>does java support multiple inheritance?</p>
+<ul>
+<li>java doesn’t support multiple inheritance</li>
+</ul>
+</li>
+<li><p>is java a pure object oriented language?<br>-No, java uses primitive data types and hence is not a pure object oriented language</p>
+</li>
+<li>are arrays primitive data types?<br>-no, arrays are objects</li>
+<li>what is difference between path and classpath?<ul>
+<li>path and classpath are operating system level environment variables. Path is used define where system can find the executables(.exe) files and classpath is used to specify the location .class file</li>
+</ul>
+</li>
+<li>what are local variable<ul>
+<li>local variables are those which are declared within a block of code like methods. local variables should be <strong>initialized</strong> before accessing them.</li>
+</ul>
+</li>
+<li>what are instance variable?<ul>
+<li>instance variables are those which are defined at the class level. Instance variables need not be initialized before using them as they are automatically initialized to their default values</li>
+</ul>
+</li>
+<li>how to define a constant variable in java?<ul>
+<li>static and final</li>
+</ul>
+</li>
+<li>should a main() method be compulsorily declared in all java classes?<ul>
+<li>not required. main() method should be defined only if the soure class is a java application</li>
+</ul>
+</li>
+<li>what is the return type of main() method?<ul>
+<li>void</li>
+</ul>
+</li>
+<li>why is the main() method declared static?<ul>
+<li>main() method is called by the jvm even before the instantiation of the class hence it is declared as static</li>
+</ul>
+</li>
+<li>can a main() method be overloaded?<ul>
+<li>yes, you can have any number of main() methods with different method signature and implementation in the class.</li>
+</ul>
+</li>
+<li>can a main() method be declared final?<ul>
+<li>yes, any inherting class will not be able to have it’s own default main() method</li>
+</ul>
+</li>
+<li>can a soure file contain more than one class declaration?<ul>
+<li>yes, a single source file can contain any number of class declarations but only one of the class can be declared as public</li>
+</ul>
+</li>
+<li>what is a package?<br>-package is collection of related classes and interfaces. package declaration should be first statement in a java class.</li>
+<li>which package is imported by default?<ul>
+<li>java.lang.package is imported by default even without a package declaration.</li>
+</ul>
+</li>
+<li><p>what is the purpose of declaring a variable as final?</p>
+<ul>
+<li>a final variable’s value can’t be changed, final variables should be initialized before using them.</li>
+</ul>
+</li>
+<li><p>what is the impact of declaring a method as final?</p>
+<ul>
+<li>a method declared as final cannot be overridden. A sub-class can’t have the same method signature with a different implementation. </li>
+</ul>
+</li>
+<li><p>I do not want my class to be inherited by any other class, what should i do?</p>
+<ul>
+<li>you should declare your classes as final, but you cann’t define your class as final if it is an abstract class.  A class declared as final can’t be extended by any other class.</li>
+</ul>
+</li>
+<li><p>can you give few examples of final classes defined in JAVA API?<br>-java.lang.string, java.lang.math are final classes.</p>
+</li>
+<li>how is final different from finally and finalize()?<ul>
+<li>final is a modifer which can be applied to a class or a method or a variable. final class can’t be overridden and final variable cann’t be changed.</li>
+<li>The finally keyword is used in association with a try / catch block and guarantees<br>that a section of code will be executed, even if an exception is thrown</li>
+<li>finalize() is a method of object class will be executed by the jvm just before collecting object to give a final chance for resource releasing activity.</li>
+</ul>
+</li>
+<li>when will you define a method as static?<ul>
+<li>when a method needs to be accessed even before the creation of the object of the class then we should declare the method as static. </li>
+</ul>
+</li>
+<li>what are the restriction imposed on a static method or a static block of code?<ul>
+<li>a static method should not refer to instance variables without creating an instance and cannot use “this” operator to refer the instance</li>
+</ul>
+</li>
+<li>what is the importance of static varibale?<ul>
+<li>static variables are class level variable where all objects of the class refer to the same variable. If one object chanegs the value then the change gets reflected in all the objects.</li>
+</ul>
+</li>
+<li><p>can we declare a static variable inside a method?</p>
+<ul>
+<li>static variables are class level variables and they cann’t be declared inside a method. If declared, the class will not compile.</li>
+</ul>
+</li>
+<li><p>what is an abstract class and what is its purpose?<br>a class which doesn’t provide complete implemenation is defined as an abstract class. abstract classes enforce abstraction.</p>
+</li>
+<li>what is use of an abstract variable?<ul>
+<li>variables cannot be declared as abstrct, only classes and methods can be declared as abstract.</li>
+</ul>
+</li>
+<li><p>can you create an object of an abstract class?</p>
+<ul>
+<li>not possible, abstract classes cann’t be instantiated.</li>
+</ul>
+</li>
+<li><p>can an abstract class be defined without any abstract methods?</p>
+<ul>
+<li>yes it is possible. this is basically to avoid instance creation of the class.</li>
+</ul>
+</li>
+<li><p>can an method inside an interface be declared as final?</p>
+<ul>
+<li>not possible, doing so will result in compilation error. public and abstract are the only applicable modifiers for method declaration in an interface.</li>
+</ul>
+</li>
+<li><p>can an interface extend another interface?</p>
+<ul>
+<li>interfaces doesn’t provide implementation hence an interface cannot implement another interface.</li>
+</ul>
+</li>
+<li><p>why is an interface be able to extend more than one interface but a class cann’t be extend more one class</p>
+<ul>
+<li>basically java doesn’t allow multiple inheritance, so a class is restriced to extend only one class. but an interface is a pure abstraction model and doesn’t have inheritance hierarchy like classes. so an interface is allowed to extend more than one interface.</li>
+</ul>
+</li>
+<li><p>can a class be defined inside an interface?</p>
+<ul>
+<li>yes it’s possible</li>
+</ul>
+</li>
+<li><p>can an interface be defined inside a class?</p>
+<ul>
+<li>yes it’s possible</li>
+</ul>
+</li>
+<li><p>what is a marker interface?</p>
+<ul>
+<li>an interface which doesn’t have any declaration inside but still enforeces a mechanism</li>
+</ul>
+</li>
+<li>which object oriented concept is achieved by using overloading and overriding?<br>-polymorphism</li>
+<li>why does java not support operator overloading?<br>-operator overloading make the code very difficult to read and maintain. To maintain code simplicity, java does’t support operator overloading</li>
+<li><p>can we define private and proteced modifiers for variables in interfaces?</p>
+<ul>
+<li>no, public abstract</li>
+</ul>
+</li>
+<li><p>what is externalizable?</p>
+<ul>
+<li>externlizable is an interface that extends serializable interface, and sends data into streams is compressed format, it has two methods, writeExternal(objectoutput out) and readExternal(Object in)</li>
+</ul>
+</li>
+<li><p>what modifiers are allowed for methods in an interfaces?</p>
+<ul>
+<li>only public and abstract modifiers are allowed for methods in interfaces.</li>
+</ul>
+</li>
+<li><p>what is an abstract method?</p>
+<ul>
+<li>an abstract method is a method is a method whose implemenation is deferred to a subclass.</li>
+</ul>
+</li>
+<li><p>what value does read() read when it has reached the end of a file?</p>
+<ul>
+<li>the read() method return -1 when it has reached the end of a file.</li>
+</ul>
+</li>
+<li><p>what is the difference between a static and a non-static inner class?</p>
+<ul>
+<li>a non-static nested class has full access to the members of the class within which it is nested. A static nested class does not have a reference to a nesting instance, so a static nested class does not have a reference to a nesting instance, so a static nested class cannot invoke non-static methods or access non-static fields of an instance of the class within which it is nested.</li>
+</ul>
+</li>
+<li><p>what’s an object lock and which object’s have locks?</p>
+<ul>
+<li>an object’s lock is a mechanism that is used by multiple threads to obtain synchronized access to the object. A thread may execute a synchronized method of an object only after it has acquired the object’s lock. all object and classes have locks. A class’s lock is acquired on the class’s Class object.</li>
+</ul>
+</li>
+<li>When can an object reference be cast to an interface reference?<ul>
+<li>An object reference be cast to an interface reference when the object implements the referenced interface.</li>
+</ul>
+</li>
+<li>Which non-Unicode letter characters may be used as the first character of an identifier?<ul>
+<li>The non-Unicode letter characters $ and _ may appear as the first character of an identifier</li>
+</ul>
+</li>
+<li>what is casting?<ul>
+<li>There are two types of casting, casting between primitive numeric types and casting between object references. Casting between numeric types is used to convert larger values, such as double values, to smaller values, such as byte values. Casting between object references is used to refer to an object by a compatible class, interface, or array type reference.</li>
+</ul>
+</li>
+<li>what is downcasting?<ul>
+<li>There are two types of casting, casting between primitive numeric types and casting between object references. Casting between numeric types is used to convert larger values, such as double values, to smaller values, such as byte values. Casting between object references is used to refer to an object by a compatible class, interface, or array type reference.</li>
+</ul>
+</li>
+<li><p>what is a native method?</p>
+<ul>
+<li>A native method is a method that is implemented in a language other than Java.</li>
+</ul>
+</li>
+<li><p>What does it mean that a method or field is “static”?</p>
+<ul>
+<li>static variables and methods are instantiated only once per class. In other words they are class variables, not instance variables. If you change the value of a static variable in a particluarl object, the value of that variable changes for all instances of that class. Static methods can be referenced with the name of the class rather than the name of a particular object of the class. That’s how libray methods like system.out.println() work. out is a static field in the java.lang.sytem. class</li>
+</ul>
+</li>
+<li><p>is null| true| false| sizeof a keyword?</p>
+<ul>
+<li>the null value is not a keyword</li>
+</ul>
+</li>
+<li>Does a class inherit the constructors of its superclass?<ul>
+<li>a class does not inherit constructors from any of its superclasses.</li>
+</ul>
+</li>
+<li><p>what is the difference between inner class and nested class?</p>
+<ul>
+<li>when a class is defined within a scope od another class, then it becomes inner class. If the access modifier of the inner class is static, then it becomes nested class.</li>
+</ul>
+</li>
+<li><p>what is numeric promotion?</p>
+<ul>
+<li>numberic promotion is the conversion of a smaller numeric type to a larger numberic type, so that integer and floating point operations may take place, in numerical promotion, byte, char, and short values are converted to int values.</li>
+</ul>
+</li>
+<li><p>what is the difference between the prefix and postfix forms of the ++ operator?</p>
+<ul>
+<li>the prefix form performs the increment operation and returns the value of the increment opeation, the postfix form returns the current value of all of the expression and then performs the increment operation on that value.</li>
+</ul>
+</li>
+<li><p>what is the difference between the &gt;&gt; and &gt;&gt;&gt; operators?</p>
+</li>
+<li><p>the &gt;&gt; operator carries the sign bit when shifting right. The &gt;&gt;&gt; zero-fills bits that have been shifted out.</p>
+</li>
+</ul>
+<ul>
+<li>hash map</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">public class MyHashMap&lt;K,V&gt;&#123;</div><div class="line">	class Entry&lt;K,V&gt;&#123;</div><div class="line">		K key;</div><div class="line">		V value;</div><div class="line">		Entry(K key, V value)&#123;</div><div class="line">		this.key=key;</div><div class="line">		this.value=value;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private int capacity =16;</div><div class="line">	private List&lt;LinkedList&lt;Entry&lt;K,V&gt;&gt;&gt; buckets;</div><div class="line">	public MyHashMap()&#123;</div><div class="line">		buckets = new ArrayList&lt;&gt;();</div><div class="line">		for(int i=0;i&lt;capacity;++i)&#123;</div><div class="line">			buckets.add(i,null);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void put(K key, V value)&#123;</div><div class="line">		if(key==null)&#123;</div><div class="line">			return new NullPonterException(&quot;Key cannot be null&quot;);</div><div class="line">		&#125;</div><div class="line">		int index = key.hashCode()%capacity;</div><div class="line"></div><div class="line">		if(buckets.get(index)==null)</div><div class="line">			buckets.set(index,new LinkedList&lt;Entry&lt;K,V&gt;&gt;());</div><div class="line"></div><div class="line">		LinkedList&lt;Entry&lt;K,V&gt;&gt;bucket = buckets.get(index);</div><div class="line">		Iterator&lt;Entry&lt;K,V&gt;&gt;iteartor = bucket.iterator();</div><div class="line">		while(iterator.hasNext())&#123;</div><div class="line">			Entry&lt;K,V&gt;entry = iterator.next();</div><div class="line">			if(entry.key.equals(key))&#123;</div><div class="line">				entry.value=value;</div><div class="line">				return;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		bucket.add(new Entry&lt;&gt;(key,value));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public V get(K key)&#123;</div><div class="line">		if(key == null)&#123;</div><div class="line">			throw new NullPonterException(&quot;key cannot be null!&quot;);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		int index = key.hashCode()%capacity;</div><div class="line">		if(buckets.get(index)==null)</div><div class="line">			return null;</div><div class="line"></div><div class="line">		LinkedList&lt;Entry&lt;K,V&gt;&gt;bucket = buckets.get(index);</div><div class="line">		Iterator&lt;Entry&lt;K,V&gt;&gt;iterator = bucket.iterator;</div><div class="line">		while(iterator.hasNext())&#123;</div><div class="line">			Entry&lt;K,V&gt;entry = iterator.next();</div><div class="line">			if(entry.key.equals(key))&#123;</div><div class="line">				return entry.value;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="other-questions"><a href="#other-questions" class="headerlink" title="other questions"></a>other questions</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div><div class="line">363</div><div class="line">364</div><div class="line">365</div><div class="line">366</div><div class="line">367</div><div class="line">368</div><div class="line">369</div><div class="line">370</div><div class="line">371</div><div class="line">372</div><div class="line">373</div><div class="line">374</div><div class="line">375</div><div class="line">376</div><div class="line">377</div><div class="line">378</div><div class="line">379</div><div class="line">380</div><div class="line">381</div><div class="line">382</div><div class="line">383</div><div class="line">384</div><div class="line">385</div><div class="line">386</div><div class="line">387</div><div class="line">388</div><div class="line">389</div><div class="line">390</div><div class="line">391</div><div class="line">392</div><div class="line">393</div><div class="line">394</div><div class="line">395</div><div class="line">396</div><div class="line">397</div><div class="line">398</div><div class="line">399</div><div class="line">400</div><div class="line">401</div><div class="line">402</div><div class="line">403</div><div class="line">404</div><div class="line">405</div><div class="line">406</div><div class="line">407</div><div class="line">408</div><div class="line">409</div><div class="line">410</div><div class="line">411</div><div class="line">412</div><div class="line">413</div><div class="line">414</div><div class="line">415</div><div class="line">416</div><div class="line">417</div><div class="line">418</div><div class="line">419</div><div class="line">420</div><div class="line">421</div><div class="line">422</div><div class="line">423</div><div class="line">424</div><div class="line">425</div><div class="line">426</div><div class="line">427</div><div class="line">428</div><div class="line">429</div><div class="line">430</div><div class="line">431</div><div class="line">432</div><div class="line">433</div><div class="line">434</div><div class="line">435</div><div class="line">436</div><div class="line">437</div><div class="line">438</div><div class="line">439</div><div class="line">440</div><div class="line">441</div><div class="line">442</div><div class="line">443</div><div class="line">444</div><div class="line">445</div><div class="line">446</div><div class="line">447</div><div class="line">448</div><div class="line">449</div><div class="line">450</div><div class="line">451</div><div class="line">452</div><div class="line">453</div><div class="line">454</div><div class="line">455</div><div class="line">456</div><div class="line">457</div><div class="line">458</div><div class="line">459</div><div class="line">460</div><div class="line">461</div><div class="line">462</div><div class="line">463</div><div class="line">464</div><div class="line">465</div><div class="line">466</div><div class="line">467</div><div class="line">468</div><div class="line">469</div><div class="line">470</div><div class="line">471</div><div class="line">472</div><div class="line">473</div><div class="line">474</div><div class="line">475</div><div class="line">476</div><div class="line">477</div><div class="line">478</div><div class="line">479</div><div class="line">480</div><div class="line">481</div><div class="line">482</div><div class="line">483</div><div class="line">484</div><div class="line">485</div><div class="line">486</div><div class="line">487</div><div class="line">488</div><div class="line">489</div><div class="line">490</div><div class="line">491</div><div class="line">492</div><div class="line">493</div><div class="line">494</div><div class="line">495</div><div class="line">496</div><div class="line">497</div><div class="line">498</div><div class="line">499</div><div class="line">500</div><div class="line">501</div><div class="line">502</div><div class="line">503</div><div class="line">504</div><div class="line">505</div><div class="line">506</div><div class="line">507</div><div class="line">508</div><div class="line">509</div><div class="line">510</div><div class="line">511</div><div class="line">512</div><div class="line">513</div><div class="line">514</div><div class="line">515</div><div class="line">516</div><div class="line">517</div><div class="line">518</div><div class="line">519</div><div class="line">520</div><div class="line">521</div><div class="line">522</div><div class="line">523</div><div class="line">524</div><div class="line">525</div><div class="line">526</div><div class="line">527</div><div class="line">528</div><div class="line">529</div><div class="line">530</div><div class="line">531</div><div class="line">532</div><div class="line">533</div><div class="line">534</div><div class="line">535</div><div class="line">536</div><div class="line">537</div><div class="line">538</div><div class="line">539</div><div class="line">540</div><div class="line">541</div><div class="line">542</div><div class="line">543</div><div class="line">544</div><div class="line">545</div><div class="line">546</div><div class="line">547</div><div class="line">548</div><div class="line">549</div><div class="line">550</div><div class="line">551</div><div class="line">552</div><div class="line">553</div><div class="line">554</div><div class="line">555</div><div class="line">556</div><div class="line">557</div><div class="line">558</div><div class="line">559</div><div class="line">560</div><div class="line">561</div><div class="line">562</div><div class="line">563</div><div class="line">564</div><div class="line">565</div><div class="line">566</div><div class="line">567</div><div class="line">568</div><div class="line">569</div><div class="line">570</div><div class="line">571</div><div class="line">572</div><div class="line">573</div><div class="line">574</div><div class="line">575</div><div class="line">576</div><div class="line">577</div><div class="line">578</div><div class="line">579</div><div class="line">580</div><div class="line">581</div><div class="line">582</div><div class="line">583</div><div class="line">584</div><div class="line">585</div><div class="line">586</div><div class="line">587</div><div class="line">588</div><div class="line">589</div><div class="line">590</div><div class="line">591</div><div class="line">592</div><div class="line">593</div><div class="line">594</div><div class="line">595</div><div class="line">596</div><div class="line">597</div><div class="line">598</div><div class="line">599</div><div class="line">600</div><div class="line">601</div><div class="line">602</div><div class="line">603</div><div class="line">604</div><div class="line">605</div><div class="line">606</div><div class="line">607</div><div class="line">608</div><div class="line">609</div><div class="line">610</div><div class="line">611</div><div class="line">612</div><div class="line">613</div><div class="line">614</div><div class="line">615</div><div class="line">616</div><div class="line">617</div><div class="line">618</div><div class="line">619</div><div class="line">620</div><div class="line">621</div><div class="line">622</div><div class="line">623</div><div class="line">624</div><div class="line">625</div><div class="line">626</div><div class="line">627</div><div class="line">628</div><div class="line">629</div><div class="line">630</div><div class="line">631</div><div class="line">632</div><div class="line">633</div><div class="line">634</div><div class="line">635</div><div class="line">636</div><div class="line">637</div><div class="line">638</div><div class="line">639</div><div class="line">640</div><div class="line">641</div><div class="line">642</div><div class="line">643</div><div class="line">644</div><div class="line">645</div><div class="line">646</div><div class="line">647</div><div class="line">648</div><div class="line">649</div><div class="line">650</div><div class="line">651</div><div class="line">652</div><div class="line">653</div><div class="line">654</div><div class="line">655</div><div class="line">656</div><div class="line">657</div><div class="line">658</div><div class="line">659</div><div class="line">660</div><div class="line">661</div><div class="line">662</div><div class="line">663</div><div class="line">664</div><div class="line">665</div><div class="line">666</div><div class="line">667</div><div class="line">668</div><div class="line">669</div><div class="line">670</div><div class="line">671</div><div class="line">672</div><div class="line">673</div><div class="line">674</div><div class="line">675</div><div class="line">676</div><div class="line">677</div><div class="line">678</div><div class="line">679</div><div class="line">680</div><div class="line">681</div><div class="line">682</div><div class="line">683</div><div class="line">684</div><div class="line">685</div><div class="line">686</div><div class="line">687</div><div class="line">688</div><div class="line">689</div><div class="line">690</div><div class="line">691</div><div class="line">692</div><div class="line">693</div><div class="line">694</div><div class="line">695</div><div class="line">696</div><div class="line">697</div><div class="line">698</div><div class="line">699</div><div class="line">700</div><div class="line">701</div><div class="line">702</div><div class="line">703</div><div class="line">704</div><div class="line">705</div><div class="line">706</div><div class="line">707</div><div class="line">708</div><div class="line">709</div><div class="line">710</div><div class="line">711</div><div class="line">712</div><div class="line">713</div><div class="line">714</div><div class="line">715</div><div class="line">716</div><div class="line">717</div><div class="line">718</div><div class="line">719</div><div class="line">720</div><div class="line">721</div><div class="line">722</div><div class="line">723</div><div class="line">724</div><div class="line">725</div><div class="line">726</div><div class="line">727</div><div class="line">728</div><div class="line">729</div><div class="line">730</div><div class="line">731</div><div class="line">732</div><div class="line">733</div><div class="line">734</div><div class="line">735</div><div class="line">736</div><div class="line">737</div><div class="line">738</div><div class="line">739</div><div class="line">740</div><div class="line">741</div><div class="line">742</div><div class="line">743</div><div class="line">744</div><div class="line">745</div><div class="line">746</div><div class="line">747</div><div class="line">748</div><div class="line">749</div><div class="line">750</div><div class="line">751</div><div class="line">752</div><div class="line">753</div><div class="line">754</div><div class="line">755</div><div class="line">756</div><div class="line">757</div><div class="line">758</div><div class="line">759</div><div class="line">760</div><div class="line">761</div><div class="line">762</div><div class="line">763</div><div class="line">764</div><div class="line">765</div><div class="line">766</div><div class="line">767</div><div class="line">768</div><div class="line">769</div><div class="line">770</div><div class="line">771</div><div class="line">772</div><div class="line">773</div><div class="line">774</div><div class="line">775</div><div class="line">776</div><div class="line">777</div><div class="line">778</div><div class="line">779</div><div class="line">780</div><div class="line">781</div><div class="line">782</div><div class="line">783</div><div class="line">784</div><div class="line">785</div><div class="line">786</div><div class="line">787</div><div class="line">788</div><div class="line">789</div><div class="line">790</div><div class="line">791</div><div class="line">792</div><div class="line">793</div><div class="line">794</div><div class="line">795</div><div class="line">796</div><div class="line">797</div><div class="line">798</div><div class="line">799</div><div class="line">800</div><div class="line">801</div><div class="line">802</div><div class="line">803</div><div class="line">804</div><div class="line">805</div><div class="line">806</div><div class="line">807</div><div class="line">808</div><div class="line">809</div><div class="line">810</div><div class="line">811</div><div class="line">812</div><div class="line">813</div><div class="line">814</div><div class="line">815</div><div class="line">816</div><div class="line">817</div><div class="line">818</div><div class="line">819</div><div class="line">820</div><div class="line">821</div><div class="line">822</div><div class="line">823</div><div class="line">824</div><div class="line">825</div><div class="line">826</div><div class="line">827</div><div class="line">828</div><div class="line">829</div><div class="line">830</div><div class="line">831</div><div class="line">832</div><div class="line">833</div><div class="line">834</div><div class="line">835</div><div class="line">836</div><div class="line">837</div><div class="line">838</div><div class="line">839</div><div class="line">840</div><div class="line">841</div><div class="line">842</div><div class="line">843</div><div class="line">844</div><div class="line">845</div><div class="line">846</div><div class="line">847</div><div class="line">848</div><div class="line">849</div><div class="line">850</div><div class="line">851</div><div class="line">852</div><div class="line">853</div><div class="line">854</div><div class="line">855</div><div class="line">856</div><div class="line">857</div><div class="line">858</div><div class="line">859</div><div class="line">860</div><div class="line">861</div><div class="line">862</div><div class="line">863</div><div class="line">864</div><div class="line">865</div><div class="line">866</div><div class="line">867</div><div class="line">868</div><div class="line">869</div><div class="line">870</div><div class="line">871</div><div class="line">872</div><div class="line">873</div><div class="line">874</div><div class="line">875</div><div class="line">876</div><div class="line">877</div><div class="line">878</div><div class="line">879</div><div class="line">880</div><div class="line">881</div><div class="line">882</div><div class="line">883</div><div class="line">884</div><div class="line">885</div><div class="line">886</div><div class="line">887</div><div class="line">888</div><div class="line">889</div><div class="line">890</div><div class="line">891</div><div class="line">892</div><div class="line">893</div><div class="line">894</div><div class="line">895</div><div class="line">896</div><div class="line">897</div><div class="line">898</div><div class="line">899</div><div class="line">900</div><div class="line">901</div><div class="line">902</div><div class="line">903</div><div class="line">904</div><div class="line">905</div><div class="line">906</div><div class="line">907</div><div class="line">908</div><div class="line">909</div><div class="line">910</div><div class="line">911</div><div class="line">912</div><div class="line">913</div><div class="line">914</div><div class="line">915</div><div class="line">916</div><div class="line">917</div><div class="line">918</div><div class="line">919</div><div class="line">920</div><div class="line">921</div><div class="line">922</div><div class="line">923</div><div class="line">924</div><div class="line">925</div><div class="line">926</div><div class="line">927</div><div class="line">928</div><div class="line">929</div><div class="line">930</div><div class="line">931</div><div class="line">932</div><div class="line">933</div><div class="line">934</div><div class="line">935</div></pre></td><td class="code"><pre><div class="line">1. What’s difference between the stack and heap?</div><div class="line">Stack is used for static memory allocation and Heap for dynamic memory allocation, both stored in the computer’s RAM.</div><div class="line"></div><div class="line">stack is faster and its allocation is dealt with when program is compiled</div><div class="line"></div><div class="line">varibale allocated on the heap have their allocated at run time and accessing this memory is a bit slower, its size is only limited by the size of virtual memory</div><div class="line"></div><div class="line">the stack is the memory set aside as scratch space for  a thread of execution. When a function is called, a block is reserved on the top of the stack for local varibales and some bookkeeping data</div><div class="line">when that function returns, the block becomes unused and can be used the next time a function is called. The stack is always reserved in a LIFO order</div><div class="line">the most recently reserved block is always the next block to be freed, this makes it really simple to keep track of the stack.</div><div class="line"></div><div class="line">the heap is memoyr set aside for dynamic allocation, unlike the stack, there is no enforced pattern to be allocation and deallocation of blocks from the heap</div><div class="line">you can alloate a block at any time and free it at any time. this makes it much more complex to keep track of which parts of the heap are allocated or free at any given time</div><div class="line"></div><div class="line">2. breaking out of nested loop in java</div><div class="line">you can use break with a label for the outer loop</div><div class="line"></div><div class="line">3. can a java file have more than one class</div><div class="line"></div><div class="line">yes, it can.However, there can only be one public class per.java file, as public classes must have the same name as the source file.The purpose of including multiple classes in one source file is to</div><div class="line">bundle related support functionality(internal data structures, support classes, etc) together with the main public class</div><div class="line"></div><div class="line">4. switch statement</div><div class="line">A switch works with the bytes, short, char and int primitive data types, it also works with enumerated types, the string class and “Character Byte short integer”</div><div class="line"></div><div class="line">5. class and interface</div><div class="line">//if class has fields and methods, what about interface:</div><div class="line">fileds : must be public final</div><div class="line">methods : must be public abstract</div><div class="line"></div><div class="line">6. //four featurs of OOP</div><div class="line"></div><div class="line">Encapsulation is one of the four fundamental OOP concepts.The other three are inheritance, polymorphism, and abstraction.</div><div class="line">Encapsulation in Java is a mechanism of wrapping the data(variables) and code acting on the data(methods) together as a single unit.</div><div class="line">In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.Therefore, it is also known as data hiding.</div><div class="line">To achieve encapsulation in JAVA</div><div class="line">Declare the variable of a class as private, provide public setter and getter methods to modify and view the variables value</div><div class="line"></div><div class="line">7. polymorphism</div><div class="line">The ability to identify a function to run is called Polymorphism.In java, c++ there are two types of polymorphism : compile time polymorphism(overloading) and runtime polymorphism(overriding)</div><div class="line"></div><div class="line">Mehtod overriding : Overriding occurs when a class method has the same name and signature as a method in parent class.When you override methods, </div><div class="line">JVM determines the proper methods to call at the program’s run time, not at the compile time.</div><div class="line"></div><div class="line">Overloading : Overloading is determined at the compile time.It occurs when several methods have same names with :</div><div class="line">Different method signature and different number or type of parameters.</div><div class="line">Same method signature but different number of parameters.</div><div class="line">Same method signature and same number of parameters but of different type</div><div class="line"></div><div class="line">8. abstarction</div><div class="line">Occurs during class level design, with the objective of hiding the implementation complexity of how the features offered by </div><div class="line">an API / design / system were implemented, in a sense simplifying the interface to acces the underlying implementation</div><div class="line"></div><div class="line">9. What is the difference between an Interface and Abstract class</div><div class="line">All methods in an interface are implicitly abstract.On the other hand, an abstract class may contain both abstract and non - abstract methods.</div><div class="line">A class may implement a number of Interfaces, but can extend only one abstract class.</div><div class="line">In order for a class to implement an interface, it must implement all its declared methods.However, a class may not implement all declared methods of an abstract class.</div><div class="line">Abstract classes can implement interfaces without even providing the implementation of interface methods.</div><div class="line">Variables declared in a Java interface is by default final.An abstract class may contain non - final variables.</div><div class="line">Members of a Java interface are public by default.A member of an abstract class can either be private, protected or public.</div><div class="line">//An interface is absolutely abstract and cannot be instantiated.An abstract class also cannot be instantiated, but can be invoked if it contains a main method.</div><div class="line"></div><div class="line">10 Main difference between a CLASS and INTERFACE is :</div><div class="line"></div><div class="line">-Class has both definition and an implementation whereas Interface only has a definition.</div><div class="line">-Interfaces are actually implemented via a Class.</div><div class="line"></div><div class="line">11 final keyword</div><div class="line">• Variable : The value cannot be changed once initialized.//the context can be changed, but the reference can’t chang.</div><div class="line">• Method : The method cannot be overridden by asubclass.</div><div class="line">• Class. - The class cannot be subclassed.</div><div class="line">The finally keyword is used in association with a try / catch block and guarantees</div><div class="line">that a section of code will be executed, even if an exception is thrown.The finally</div><div class="line">block will be executed after the try and catch blocks, but before control transfers back</div><div class="line">to its origin.</div><div class="line">Throws clause in used to declare an exception and throw keyword is used to throw an exception explicitly</div><div class="line">Throw new Exception(“You have some exception”)</div><div class="line">Throws IOException, ArithmeticException, NullPointerException</div><div class="line"></div><div class="line">Finalize method :</div><div class="line">Is is an object method.It is called when an object is about to get garbage collected.That can be at any time after it has become eligible for garbage collection</div><div class="line"></div><div class="line">12 What is the difference between == vs equals in java</div><div class="line">The == operator tests whether two variable have the same references : memory address</div><div class="line">The equals method tests whether two variables refer to objects that have the same state(values)</div><div class="line"></div><div class="line">13 Difference between an instance and static variable ?</div><div class="line">A static variable is shared by all instances of the class, while an instance variable is unique to each instance of the class</div><div class="line">A static variable’s memory is allocated at compile time, they are loaded at load time and initialized at class initialization time.</div><div class="line">In the case of an instance variable all of the above is done at run time</div><div class="line"></div><div class="line">14. Calling non - static method in static method in java ?</div><div class="line">The only way to call a non - static method from a static method is to have an instance of the class containing the non - static method,</div><div class="line">by defination, a non - static method is one that is called on an instance of some class, whereas a static method belongs to the class itself.</div><div class="line"></div><div class="line">15 Difference between int and integer</div><div class="line">Int is a primitive type.Integer is a class with a single field of type int.</div><div class="line">This class is used where you need an int to be treated like any other object, such as generic types of situations where you need nullability</div><div class="line"></div><div class="line">16 Constructor can be override ?</div><div class="line">No, cann’t be inherited, so can’t be override</div><div class="line"></div><div class="line">17 Static methods can’t be abstract in java :</div><div class="line">Because “abstract” means : ”implements no functionality”, and “static” means : there is functionality even if you don’t have an object instance.That is logical contradiction</div><div class="line"></div><div class="line">18 nested class</div><div class="line">Nested classes are divided into two categories : static and non - static.Nested class that are declared static are simply called static nested classes. Non - static nested classes are called inner classes</div><div class="line"></div><div class="line">Static nested classes are accessed using the enclosing class name</div><div class="line">//OuterClass.StaticNestedClass</div><div class="line">//OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();</div><div class="line"></div><div class="line">An instance of InnerClass can exist only within an instance of outerclass and has direct access to the method and fields of its enclosing instance</div><div class="line">To instantiate an inner class, you must first instantiate the outer class.The, create the inner object with the outer object with</div><div class="line">// Outerclass.innerclass innerObject=outerObject.new Innerclass()</div><div class="line"></div><div class="line"></div><div class="line">//static class: declared as a static member of another class</div><div class="line"></div><div class="line">//inner class: declared as an instance member of another class</div><div class="line">inner class instance has access to the instance members of the containing class instance.These enclosing instance members are </div><div class="line">referred to inside the inner class via just their simple names, not via this (this in the inner class refers to the inner class instance, not the associated containing class instance) :</div><div class="line">//local inner class : declared inside an instance method of another class</div><div class="line">so it can only be instantiated and have its members accessed within its containing method.</div><div class="line"></div><div class="line">public class Outerclass &#123;</div><div class="line">	// instance method of the outer class </div><div class="line">	void my_Method() &#123;</div><div class="line">		int num = 23;</div><div class="line"></div><div class="line">		// method-local inner class</div><div class="line">		class MethodInner_Demo &#123;</div><div class="line">			public void print() &#123;</div><div class="line">				System.out.println(&quot;This is method inner class &quot; + num);</div><div class="line">			&#125;</div><div class="line">		&#125; // end of inner class</div><div class="line"></div><div class="line">		// Accessing the inner class</div><div class="line">		MethodInner_Demo inner = new MethodInner_Demo();</div><div class="line">		inner.print();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String args[]) &#123;</div><div class="line">		Outerclass outer = new Outerclass();</div><div class="line">		outer.my_Method();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">//anonymous inner class : like a local inner class, but written as an expression which returns a one - off object</div><div class="line">have no name</div><div class="line">An anonymous inner class is a syntactically convenient way of writing a local inner class</div><div class="line">If you want a local inner class which implements multiple interfaces or which implements interfaces </div><div class="line">while extending some class other than Object or which specifies its own constructor, you&apos;re stuck creating a regular named local inner class//就是说要用anonymous inner class</div><div class="line"></div><div class="line">abstract class Person &#123;</div><div class="line">	public abstract void eat();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Child extends Person &#123;</div><div class="line">	public void eat() &#123;</div><div class="line">		System.out.println(&quot;eat something&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Demo &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p = new Child();</div><div class="line">		p.eat();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">actually you can write this way</div><div class="line">abstract class Person &#123;</div><div class="line">	public abstract void eat();</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Demo &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p = new Person()&#123;</div><div class="line">			public void eat() &#123;</div><div class="line">				System.out.println(&quot;eat something&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">		p.eat();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">19 does finally always exectutes in JAVA?</div><div class="line">Finally will be called</div><div class="line"></div><div class="line">The only times finally won’t be called are :</div><div class="line"></div><div class="line">If you call System.exit()</div><div class="line">If the jvm crashes first</div><div class="line">If there is an infinite loop in the try block</div><div class="line">If the power turns off</div><div class="line"></div><div class="line">20 exception in java</div><div class="line"></div><div class="line">Errors and RuntimeExceptions are unchecked</div><div class="line">all other exceptions  are checked</div><div class="line"></div><div class="line">Difference between Error and Exception :</div><div class="line">Error : indicates serious problems that a reasonable application should not try to catch</div><div class="line">Exception : indicates conditions that a reasonable application might want to catch</div><div class="line"></div><div class="line">21 List five runtime exception :</div><div class="line">NullPointerException.ArrayIndexOutofBoundsException.ClassCastException</div><div class="line">IllegalArgumnetException IllegalStateException</div><div class="line"></div><div class="line"></div><div class="line">25 What is the difference between asynchronous and synchronous execution ?</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">27 Difference between arraylist and vector</div><div class="line">They are almost same : implement List interface, get element according to its index</div><div class="line">Diff :</div><div class="line">Vectors are synchronized, arraylist are not :</div><div class="line">Data growth methods</div><div class="line">Synchronization :</div><div class="line">If multiple thread access an Arraylist concurrently then we must externally sunchronize the block of code which modifies the list either structurally or simply modify an element.</div><div class="line">structural modeifications means addition or deletions of elemetns from the list, Setting the value of an existing element is not structure modicfication</div><div class="line"></div><div class="line">data growth</div><div class="line">Internally, both the arraylist and vector hold onto their contents using an array, when an element is inserted into an arraylist or a vector,</div><div class="line">the object will need to expand its internal array if run out of room.A vector defaults to doubling the size of its array, while the arraylist increases its array size by 50 percent</div><div class="line"></div><div class="line">28 diff between hashtable and hashmap</div><div class="line">Hashtable is synchronized, whereas hasmap is not.This makes HashMap better for non - treaded applications, as unsynchroinzed objects typically pefrom better than synchronized ones</div><div class="line">Hashtable does not allow null keys or values, hasmap allows one null key and any number of null values</div><div class="line"></div><div class="line">29 Difference Between Array And ArrayList In Java </div><div class="line"></div><div class="line">resizeable: array is static in size that is fixed length data struture. one can not change the length after creating the array object</div><div class="line"></div><div class="line">primitives : arralist cannot contains primitive data types(), it can only contains object while aray can contain both primitive data types as well as objects</div><div class="line"></div><div class="line">iterating the values: we can use iterator to iterate through arraylist</div><div class="line"></div><div class="line">multi-dimensional: array can be multi dimensonal, while arraylist is always single dimesional</div><div class="line"></div><div class="line">29 diff between hashset and treeset</div><div class="line"></div><div class="line">ordering: haset stores the object in random order, elements are sorted according to the natrual ordering of its elements in Treeset</div><div class="line">NULL value: hashset can store null object while treeset does not allow null object. If one try to store null object in Tree object, it will throw null pointer</div><div class="line"></div><div class="line">performance : hashset take constant time performace for basic operations like add, remove contains and size. while treeset guarantees log(N) time cost for the basic opertions</div><div class="line"></div><div class="line"> speed: hasset is much faster than tree set</div><div class="line"></div><div class="line">internal implementation: hashset are interally backed by hashmap, while treeset is RB TREE</div><div class="line"></div><div class="line">hashset uses equals method for comparsion in java while treeset uses compareTo method for maintaing ordering</div><div class="line"></div><div class="line">30 java stream</div><div class="line"></div><div class="line">Character stream implements inputstreamReader and OutputStreamWriter</div><div class="line">Byte stream : implements inputStream outputstream</div><div class="line"></div><div class="line">A byte stream access the file byte by byte.A byte stream is a suitable for any kind of file.However not quite appropriate for text files. </div><div class="line">if the file is using a unicode encoding and a character is represented with two bytes, </div><div class="line">the byte stream will treat these separately and you will need to do the conversion yourself.</div><div class="line"></div><div class="line">A character stream will read a file character by character.A character stream needs to be given the file encoding in order to work properly</div><div class="line">Character Stream is a higher level concept than Byte Stream</div><div class="line"></div><div class="line">31 Serializable is a special interface that specifies that class is serializable, it’s special in that unlike a normal interface it does not define any methods that must be implemented, </div><div class="line">it is simply marking the class as serializabl</div><div class="line"></div><div class="line">As to what “Serializable” means, it simply means converting an instance of an object  into a format where it can be written to disk, </div><div class="line">or possibly transmitted over a network, you could for example save your object to disk and reload it later, with all the field values and internal state saved.</div><div class="line"></div><div class="line">32 garbage collector</div><div class="line">garbage collector is a program which runs on the java virtual machine which gets rid of objects which are not being used by a java application anymore, it is a form of automatic memory management</div><div class="line">Automatic memory management schemes like garbage collection makes it so the programmer does not have </div><div class="line">to worry about memory management issues, so he or she can focus more on developing the applications they need to develop</div><div class="line"></div><div class="line"></div><div class="line">33 what is the most important feature of Java ?</div><div class="line">Java is a platform independent language.</div><div class="line"></div><div class="line">34 What do you mean by platform independence ?</div><div class="line">Platform independence means that we can write and compile the java code in one platform(eg Windows) and can execute the class in any other supported platform eg(Linux, Solaris, etc).</div><div class="line"></div><div class="line">35 What is a JVM ?</div><div class="line">JVM is Java Virtual Machine which is a run time environment for the compiled java class files.</div><div class="line"></div><div class="line">36 Are JVM&apos;s platform independent?</div><div class="line">JVM&apos;s are not platform independent. JVM&apos;s are platform specific run time implementation provided by the vendor.</div><div class="line"></div><div class="line">37What is the difference between a JDK and a JVM ?</div><div class="line"></div><div class="line">JDK is Java Development Kit which is for development purpose and it includes execution environment also.But JVM is purely a </div><div class="line">run time environment and hence you will not be able to compile your source files using a JVM.</div><div class="line"></div><div class="line">Java Developer Kit contains tools needed to develop the Java programs, and JRE to run the programs.The tools include compiler(javac.exe), Java application launcher(java.exe), Appletviewer, etc…</div><div class="line"></div><div class="line">Compiler converts java code into byte code.Java application launcher opens a JRE, loads the class, and invokes its main method.</div><div class="line"></div><div class="line">You need JDK, if at all you want to write your own programs, and to compile them.For running java programs, JRE is sufficient.</div><div class="line"></div><div class="line">//JRE is targeted for execution of Java files</div><div class="line"></div><div class="line">i.e.JRE = JVM + Java Packages Classes(like util, math, lang, awt, swing etc) + runtime libraries.</div><div class="line"></div><div class="line">JDK is mainly targeted for java development.I.e.You can create a Java file(with the help of Java packages), compile a Java file and run a java file.</div><div class="line"></div><div class="line">JRE(Java Runtime Environment)</div><div class="line"></div><div class="line">Java Runtime Environment contains JVM, class libraries, and other supporting files.It does not contain any development tools such as compiler, debugger, etc.</div><div class="line">Actually JVM runs the program, and it uses the class libraries, and other supporting files provided in JRE.If you want to run any java program, you need to have JRE installed in the system</div><div class="line"></div><div class="line">The Java Virtual Machine provides a platform - independent way of executing code; That mean compile once in any machine and run it any where(any machine).</div><div class="line"></div><div class="line">JVM(Java Virtual Machine)</div><div class="line"></div><div class="line">As we all aware when we compile a Java file, output is not an ‘exe’ but it’s a ‘.class’ file.‘.class’ file consists of Java byte codes </div><div class="line">which are understandable by JVM.Java Virtual Machine interprets the byte code into the machine code depending upon the underlying operating </div><div class="line">system and hardware combination.It is responsible for all the things like garbage collection, array bounds checking, etc… JVM is platform dependent.</div><div class="line"></div><div class="line">The JVM is called “virtual” because it provides a machine interface that does not depend on the underlying operating system and </div><div class="line">machine hardware architecture.This independence from hardware and operating system is a cornerstone of the write - once run - anywhere value of Java programs.</div><div class="line"></div><div class="line">There are different JVM implementations are there.These may differ in things like performance, reliability, speed, etc.These </div><div class="line">implementations will differ in those areas where Java specification doesn’t mention how to implement the features, </div><div class="line">like how the garbage collection process works is JVM dependent, Java spec doesn’t define any specific way to do this.</div><div class="line"></div><div class="line">38//What is a pointer and does Java support pointers ?</div><div class="line">Pointer is a varible to store the address.Improper handling of pointers leads to memory leaks and reliability issues hence Java doesn&apos;t support the usage of pointers.</div><div class="line"></div><div class="line">39//What is the base class of all classes ?</div><div class="line">java.lang.Object</div><div class="line"></div><div class="line">40//Does Java support multiple inheritance ?</div><div class="line">Java doesn&apos;t support multiple inheritance.</div><div class="line"></div><div class="line">41 //Is Java a pure object oriented language ?</div><div class="line">Java uses primitive data types and hence is not a pure object oriented language.</div><div class="line"></div><div class="line">42 //Are arrays primitive data types ?</div><div class="line">In Java, Arrays are objects.</div><div class="line"></div><div class="line">42 //What is difference between Path and Classpath ?</div><div class="line">Path and Classpath are operating system level environment variales.Path is used define where the system can find the executables(.exe) </div><div class="line">files and classpath is used to specify the location .class files.</div><div class="line"></div><div class="line">43 //What are local variables ?</div><div class="line">Local varaiables are those which are declared within a block of code like methods.Local variables should be initialised before accessing them.</div><div class="line"></div><div class="line">44 //What are instance variables ?</div><div class="line">Instance variables are those which are defined at the class level.Instance variables need not be initialized before using them as they are automatically initialized to their default values.</div><div class="line"></div><div class="line">45 //How to define a constant variable in Java ?</div><div class="line">The variable should be declared as static and final.So only one copy of the variable exists for all instances of the class and the value can&apos;t be changed also.</div><div class="line"></div><div class="line">static final int MAX_LENGTH = 50; is an example for constant.</div><div class="line"></div><div class="line">46 //Should a main() method be compulsorily declared in all java classes ?</div><div class="line">No not required.main() method should be defined only if the source class is a java application.</div><div class="line"></div><div class="line">47 //What is the return type of the main() method ?</div><div class="line">Main() method doesn&apos;t return anything hence declared void.</div><div class="line"></div><div class="line">48 //Why is the main() method declared static ?</div><div class="line">main() method is called by the JVM even before the instantiation of the class hence it is declared as static.</div><div class="line"></div><div class="line">49 //What is the arguement of main() method ?</div><div class="line">main() method accepts an array of String object as arguement.</div><div class="line"></div><div class="line"></div><div class="line">50 //Can a main() method be overloaded ?</div><div class="line">Yes.You can have any number of main() methods with different method signature and implementation in the class.</div><div class="line"></div><div class="line">51 //Can a main() method be declared final ?</div><div class="line">Yes.Any inheriting class will not be able to have it&apos;s own default main() method.</div><div class="line"></div><div class="line">52 //Does the order of public and static declaration matter in main() method ?</div><div class="line">No.It doesn&apos;t matter but void should always come before main().</div><div class="line"></div><div class="line">53 //Can a source file contain more than one class declaration ?</div><div class="line">Yes a single source file can contain any number of Class declarations but only one of the class can be declared as public.</div><div class="line"></div><div class="line">54 //What is a package ?</div><div class="line">Package is a collection of related classes and interfaces.package declaration should be first statement in a java class.</div><div class="line"></div><div class="line">55 //Which package is imported by default ?</div><div class="line">java.lang package is imported by default even without a package declaration.</div><div class="line"></div><div class="line">56 //Can a class declared as private be accessed outside it&apos;s package?</div><div class="line">Not possible.</div><div class="line"></div><div class="line">57 //Can a class be declared as protected ?</div><div class="line">The protected access modifier cannot be applied to class and interfaces.Methods, fields can be declared protected, however methods and fields in a interface cannot be declared protected.</div><div class="line"></div><div class="line">58 //What is the access scope of a protected method ?</div><div class="line">A protected method can be accessed by the classes within the same package or by the subclasses of the class in any package.</div><div class="line"></div><div class="line">59 //What is the purpose of declaring a variable as final ?</div><div class="line">A final variable&apos;s value can&apos;t be changed.final variables should be initialized before using them.</div><div class="line"></div><div class="line">60 //What is the impact of declaring a method as final ?</div><div class="line">A method declared as final can&apos;t be overridden. A sub-class can&apos;t have the same method signature with a different implementation.</div><div class="line"></div><div class="line">61 //I don&apos;t want my class to be inherited by any other class. What should i do?</div><div class="line">You should declared your class as final.But you can&apos;t define your class as final, if it is an abstract class. A class declared as final can&apos;t be extended by any other class.</div><div class="line"></div><div class="line">62 //Can you give few examples of final classes defined in Java API ?</div><div class="line">java.lang.String, java.lang.Math are final classes.</div><div class="line"></div><div class="line">63 //How is final different from finally and finalize() ?</div><div class="line">final is a modifier which can be applied to a class or a method or a variable.final class can&apos;t be inherited, final method can&apos;t be overridden and final variable can&apos;t be changed. </div><div class="line"></div><div class="line">finally is an exception handling code section which gets executed whether an exception is raised or not by the try block code segment.</div><div class="line"></div><div class="line">finalize() is a method of Object class which will be executed by the JVM just before garbage collecting object to give a final chance for resource releasing activity.</div><div class="line"></div><div class="line"></div><div class="line">64 //Can a class be declared as static ?</div><div class="line">We can not declare top level class as static, but only inner class can be declared static.</div><div class="line">public class Test</div><div class="line">&#123;</div><div class="line">	static class InnerClass</div><div class="line">	&#123;</div><div class="line">		public static void InnerMethod()</div><div class="line">		&#123;</div><div class="line">			System.out.println(&quot;Static Inner Class!&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	public static void main(String args[])</div><div class="line">	&#123;</div><div class="line">		Test.InnerClass.InnerMethod();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//output: Static Inner Class!</div><div class="line"></div><div class="line"></div><div class="line">64 //When will you define a method as static ?</div><div class="line">When a method needs to be accessed even before the creation of the object of the class then we should declare the method as static.</div><div class="line"></div><div class="line">65 //What are the restriction imposed on a static method or a static block of code ?</div><div class="line">A static method should not refer to instance variables without creating an instance and cannot use &quot;this&quot; operator to refer the instance.</div><div class="line"></div><div class="line"></div><div class="line">66 //I want to print &quot;Hello&quot; even before main() is executed.How will you acheive that ?</div><div class="line">Print the statement inside a static block of code.Static blocks get executed when the class gets loaded into </div><div class="line">the memory and even before the creation of an object.Hence it will be executed before the main() method.And it will be executed only once.</div><div class="line"></div><div class="line"></div><div class="line">67 //What is the importance of static variable ?</div><div class="line">static variables are class level variables where all objects of the class refer to the same variable.If one object changes the value then the change gets reflected in all the objects.</div><div class="line"></div><div class="line"></div><div class="line">68 //Can we declare a static variable inside a method ?</div><div class="line">Static varaibles are class level variables and they can&apos;t be declared inside a method. If declared, the class will not compile.</div><div class="line"></div><div class="line"></div><div class="line">69 //What is an Abstract Class and what is it&apos;s purpose?</div><div class="line">A Class which doesn&apos;t provide complete implementation is defined as an abstract class. Abstract classes enforce abstraction.</div><div class="line"></div><div class="line"></div><div class="line">70 //Can a abstract class be declared final ?</div><div class="line">Not possible.An abstract class without being inherited is of no use and hence will result in compile time error.</div><div class="line"></div><div class="line"></div><div class="line">71 //What is use of a abstract variable ?</div><div class="line">Variables can&apos;t be declared as abstract. only classes and methods can be declared as abstract.</div><div class="line"></div><div class="line"></div><div class="line">72 //Can you create an object of an abstract class ?</div><div class="line">Not possible.Abstract classes can&apos;t be instantiated.</div><div class="line"></div><div class="line">73 //Can a abstract class be defined without any abstract methods ?</div><div class="line">Yes it&apos;s possible. This is basically to avoid instance creation of the class.</div><div class="line"></div><div class="line">74 //Class C implements Interface I containing method m1 and m2 declarations.Class C has provided implementation for method m2.Can i create an object of Class C ?</div><div class="line">No not possible.Class C should provide implementation for all the methods in the Interface I.Since </div><div class="line">Class C didn&apos;t provide implementation for m1 method, it has to be declared as abstract. Abstract classes can&apos;t be instantiated.</div><div class="line"></div><div class="line">75 //Can a method inside a Interface be declared as final ?</div><div class="line">No not possible.Doing so will result in compilation error. public and abstract are the only applicable modifiers for method declaration in an interface.</div><div class="line"></div><div class="line">76 //Can an Interface implement another Interface ?</div><div class="line">Intefaces doesn&apos;t provide implementation hence a interface cannot implement another interface.</div><div class="line"></div><div class="line">77// Can an Interface extend another Interface ?</div><div class="line">Yes an Interface can inherit another Interface, for that matter an Interface can extend more than one Interface.</div><div class="line"></div><div class="line">78//Can a Class extend more than one Class ?</div><div class="line">Not possible.A Class can extend only one class but can implement any number of Interfaces.</div><div class="line"></div><div class="line"></div><div class="line">79 //Why is an Interface be able to extend more than one Interface but a Class can&apos;t extend more than one Class?</div><div class="line">Basically Java doesn&apos;t allow multiple inheritance, so a Class is restricted to extend only one Class. </div><div class="line">But an Interface is a pure abstraction model and doesn&apos;t have inheritance hierarchy like classes(</div><div class="line">do remember that the base class of all classes is Object).So an Interface is allowed to extend more than one Interface.</div><div class="line"></div><div class="line">80 //Can an Interface be final ?</div><div class="line">Not possible.Doing so so will result in compilation error.</div><div class="line"></div><div class="line">81 //Can a class be defined inside an Interface ?</div><div class="line">Yes it&apos;s possible.</div><div class="line"></div><div class="line">82 //Can an Interface be defined inside a class ?</div><div class="line">Yes it&apos;s possible.</div><div class="line"></div><div class="line">83 //What is a Marker Interface ?</div><div class="line">An Interface which doesn&apos;t have any declaration inside but still enforces a mechanism.</div><div class="line"></div><div class="line">84 //Which object oriented Concept is achieved by using overloading and overriding ?</div><div class="line">Polymorphism.</div><div class="line"></div><div class="line">85 //Why does Java not support operator overloading ?</div><div class="line">Operator overloading makes the code very difficult to read and maintain.To maintain code simplicity, Java doesn&apos;t support operator overloading.</div><div class="line"></div><div class="line">86 //Can we define private and protected modifiers for variables in interfaces ?</div><div class="line">No.</div><div class="line"></div><div class="line">87 //What is Externalizable ?</div><div class="line">Externalizable is an Interface that extends Serializable Interface.And sends data into Streams in Compressed Format.It has two methods, </div><div class="line">writeExternal(ObjectOuput out) and readExternal(ObjectInput in)</div><div class="line"></div><div class="line"></div><div class="line">88 //What modifiers are allowed for methods in an Interface ?</div><div class="line">Only public and abstract modifiers are allowed for methods in interfaces.</div><div class="line"></div><div class="line">89 //What is a local, member and a class variable ?</div><div class="line">Variables declared within a method are &quot;local&quot; variables.</div><div class="line"></div><div class="line">Variables declared within the class i.e not within any methods are &quot;member&quot; variables(global variables).</div><div class="line"></div><div class="line">Variables declared within the class i.e not within any methods and are defined as &quot;static&quot; are class variables.</div><div class="line"></div><div class="line">90 //What is an abstract method ?</div><div class="line">An abstract method is a method whose implementation is deferred to a subclass.</div><div class="line"></div><div class="line"></div><div class="line">91 //What value does read() return when it has reached the end of a file ?</div><div class="line">The read() method returns - 1 when it has reached the end of a file.</div><div class="line"></div><div class="line">92 //Can a Byte object be cast to a double value ?</div><div class="line">No, an object cannot be cast to a primitive value.</div><div class="line"></div><div class="line">93 //What is the difference between a static and a non - static inner class ?</div><div class="line"></div><div class="line">A non - static nested class has full access to the members of the class within which it is nested.</div><div class="line">A static nested class does not have a reference to a nesting instance, so a static nested class cannot invoke non - static methods or access </div><div class="line">non - static fields of an instance of the class within which it is nested.</div><div class="line"></div><div class="line">94 //What is an object&apos;s lock and which object&apos;s have locks ?</div><div class="line">An object&apos;s lock is a mechanism that is used by multiple threads to obtain synchronized access to the object.</div><div class="line">A thread may execute a synchronized method of an object only after it has acquired the object&apos;s lock.All objects and classes have locks.A class&apos;s lock is acquired on the class&apos;s Class object.</div><div class="line"></div><div class="line">95 //What is the % operator ?</div><div class="line">It is referred to as the modulo or remainder operator. It returns the remainder of dividing the first operand by the second operand.</div><div class="line"></div><div class="line"></div><div class="line">96 //When can an object reference be cast to an interface reference ?</div><div class="line">An object reference be cast to an interface reference when the object implements the referenced interface.</div><div class="line"></div><div class="line">97 //Which class is extended by all other classes ?</div><div class="line">The Object class is extended by all other classes.</div><div class="line"></div><div class="line">98//Which non - Unicode letter characters may be used as the first character of an identifier ?</div><div class="line">The non - Unicode letter characters $ and _ may appear as the first character of an identifier</div><div class="line"></div><div class="line">99//What restrictions are placed on method overloading ?</div><div class="line">Two methods may not have the same name and argument list but different return types.</div><div class="line"></div><div class="line">100 //What is casting ?</div><div class="line">There are two types of casting, casting between primitive numeric types and casting between object references.Casting</div><div class="line">between numeric types is used to convert larger values, such as double values, to smaller values, </div><div class="line">such as byte values.Casting between object references is used to refer to an object by a compatible class, interface, or array type reference.</div><div class="line"></div><div class="line">101// What is the return type of a program&apos;s main() method?</div><div class="line">void.</div><div class="line"></div><div class="line">102 //If a variable is declared as private, where may the variable be accessed ?</div><div class="line">A private variable may only be accessed within the class in which it is declared.</div><div class="line"></div><div class="line"></div><div class="line">103 //What do you understand by private, protected and public ?</div><div class="line">These are accessibility modifiers.Private is the most restrictive, while public is the least restrictive.There </div><div class="line">is no real difference between protected and the default type(also known as package protected) within the context of the same package, </div><div class="line">however the protected keyword allows visibility to a derived class in a different package.</div><div class="line"></div><div class="line">104 //What is Downcasting ?</div><div class="line">Downcasting is the casting from a general to a more specific type, i.e.casting down the hierarchy</div><div class="line">Animal animal = new Dog();</div><div class="line">Dog castedDog = (Dog)animal;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">105 //What modifiers may be used with an inner class that is a member of an outer class ?</div><div class="line">A(non - local) inner class may be declared as public, protected, private, static, final, or abstract.</div><div class="line"></div><div class="line">106 //How many bits are used to represent Unicode, ASCII, UTF - 16, and UTF - 8 characters ?</div><div class="line">Unicode requires 16 bits and ASCII require 7 bits Although the ASCII character set uses only 7 bits, it is usually represented as 8 bits.</div><div class="line"></div><div class="line">UTF - 8 represents characters using 8, 16, and 18 bit patterns.</div><div class="line"></div><div class="line">UTF - 16 uses 16 - bit and larger bit patterns.</div><div class="line"></div><div class="line">107 //What restrictions are placed on the location of a package statement within a source code file ?</div><div class="line">A package statement must appear as the first line in a source code file(excluding blank lines and comments).</div><div class="line"></div><div class="line">108 //What is a native method ?</div><div class="line">A native method is a method that is implemented in a language other than Java.</div><div class="line"></div><div class="line"></div><div class="line">109 //What are order of precedence and associativity, and how are they used ?</div><div class="line">Order of precedence determines the order in which operators are evaluated in expressions.Associatity determines whether an expression is evaluated left - to - right or right - to - left.</div><div class="line"></div><div class="line">110 //Can an anonymous class be declared as implementing an interface and extending a class ?</div><div class="line">An anonymous class may implement an interface or extend a superclass, but may not be declared to do both.</div><div class="line"></div><div class="line">111//What is the range of the char type ?</div><div class="line">The range of the char type is 0 to 216 - 1 (i.e. 0 to 65535.)</div><div class="line"></div><div class="line">112 //What is the range of the short type ?</div><div class="line">The range of the short type is - (215) to 215 - 1. (i.e. - 32, 768 to 32, 767)</div><div class="line"></div><div class="line">113 //Why isn&apos;t there operator overloading?</div><div class="line">Because C++ has proven by example that operator overloading makes code almost impossible to maintain.</div><div class="line"></div><div class="line">114 //What does it mean that a method or field is &quot;static&quot; ?</div><div class="line">Static variables and methods are instantiated only once per class.In other words they are class variables, </div><div class="line">not instance variables.If you change the value of a static variable in a particular object, the value of that variable changes for </div><div class="line">all instances of that class.Static methods can be referenced with the name of the class rather than the name of a particular object of the </div><div class="line">class (though that works too).That&apos;s how library methods like System.out.println() work. out is a static field in the java.lang.System class.</div><div class="line"></div><div class="line">115 //Is null a keyword ?</div><div class="line">The null value is not a keyword.</div><div class="line"></div><div class="line">116 //Which characters may be used as the second character of an identifier, but not as the first character of an identifier ?</div><div class="line">The digits 0 through 9 may not be used as the first character of an identifier but they may be used after the first character of an identifier.</div><div class="line"></div><div class="line">117 //Is the ternary operator written x : y ? z or x ? y : z ?</div><div class="line">It is written x ? y : z.</div><div class="line"></div><div class="line">118 //How is rounding performed under integer division ?</div><div class="line">The fractional part of the result is truncated.This is known as rounding toward zero.</div><div class="line"></div><div class="line">119 //If a class is declared without any access modifiers, where may the class be accessed ?</div><div class="line">A class that is declared without any access modifiers is said to have package access.This means that the class can only be accessed by other classes and interfaces that are defined within the same package.</div><div class="line"></div><div class="line">120 //Does a class inherit the constructors of its superclass ?</div><div class="line">A class does not inherit constructors from any of its superclasses.</div><div class="line"></div><div class="line"></div><div class="line">121 //Name the eight primitive Java types.</div><div class="line">The eight primitive types are byte, char, short, int, long, float, double, and boolean.</div><div class="line"></div><div class="line">122 //What restrictions are placed on the values of each case of a switch statement ?</div><div class="line">During compilation, the values of each case of a switch statement must evaluate to a value that can be promoted to an int value.</div><div class="line"></div><div class="line">123 //What is the difference between a while statement and a do while statement ?</div><div class="line">A while statement checks at the beginning of a loop to see whether the next loop iteration should occur.</div><div class="line">A do while statement checks at the end of a loop to see whether the next iteration of a loop should occur.The do whilestatement will always execute the body of a loop at least once.</div><div class="line"></div><div class="line">124 //What modifiers can be used with a local inner class ?</div><div class="line">A local inner class may be final or abstract.</div><div class="line"></div><div class="line">125 //When does the compiler supply a default constructor for a class ?</div><div class="line">The compiler supplies a default constructor for a class if no other constructors are provided.</div><div class="line"></div><div class="line">126 //If a method is declared as protected, where may the method be accessed ?</div><div class="line">A protected method may only be accessed by classes or interfaces of the same package or by subclasses of the class in which it is declared.</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">127 //What are the legal operands of the instanceof operator ?</div><div class="line">The left operand is an object reference or null value and the right operand is a class, interface, or array type.</div><div class="line"></div><div class="line">128 //Are true and false keywords ?</div><div class="line">The values true and false are not keywords.</div><div class="line"></div><div class="line">129 //What happens when you add a double value to a String ?</div><div class="line">The result is a String object.</div><div class="line"></div><div class="line">130 //What is the diffrence between inner class and nested class ?</div><div class="line">When a class is defined within a scope od another class, then it becomes inner class.If the access modifier of the inner class is static, then it becomes nested class.</div><div class="line"></div><div class="line">131 //Can an abstract class be final ?</div><div class="line">An abstract class may not be declared as final.</div><div class="line"></div><div class="line">132 //What is numeric promotion ?</div><div class="line">Numeric promotion is the conversion of a smaller numeric type to a larger numeric type, </div><div class="line">so that integer and floating - point operations may take place.In numerical promotion, byte, char, and short values are converted to int values.</div><div class="line">The int values are also converted to long values, if necessary.The long and float values are converted to double values, as required.</div><div class="line"></div><div class="line"></div><div class="line">133 //What is the difference between a public and a non - public class ?</div><div class="line">A public class may be accessed outside of its package.A non - public class may not be accessed outside of its package.</div><div class="line"></div><div class="line">134 //To what value is a variable of the boolean type automatically initialized ?</div><div class="line">The default value of the boolean type is false.</div><div class="line"></div><div class="line">135 //What is the difference between the prefix and postfix forms of the++ operator ?</div><div class="line">The prefix form performs the increment operation and returns the value of the increment operation.</div><div class="line">The postfix form returns the current value all of the expression and then performs the increment operation on that value.</div><div class="line"></div><div class="line"></div><div class="line">136 //What restrictions are placed on method overriding ?</div><div class="line">Overridden methods must have the same name, argument list, and return type.The overriding method may not limit the </div><div class="line">access of the method it overrides.The overriding method may not throw any exceptions that may not be thrown by the overridden method.</div><div class="line"></div><div class="line">137 //What is a Java package and how is it used ?</div><div class="line">A Java package is a naming context for classes and interfaces.A package is used to create a separate name space </div><div class="line">for groups of classes and interfaces.Packages are also used to organize related classes and interfaces into a single API unit and to control accessibility to these classes and interfaces.</div><div class="line"></div><div class="line">138 //What modifiers may be used with a top - level class ?</div><div class="line">A top - level class may be public, abstract, or final.</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">139 What is the difference between an if statement and a switch statement ?</div><div class="line">The if statement is used to select among two alternatives.It uses a boolean expression to decide which alternative should be executed.</div><div class="line">The switch statement is used to select among multiple alternatives.It uses an int expression to determine which alternative should be executed.</div><div class="line"></div><div class="line">140 //What are the practical benefits, if any, of importing a specific class rather than an entire package(e.g.import java.net.*versus import java.net.Socket) ?</div><div class="line">It makes no difference in the generated class files since only the classes that are actually used are referenced by the generated class file.</div><div class="line">There is another practical benefit to importing single classes, and this arises when two(or more) packages have classes with the same name.Take java.util.Timer and javax.swing.Timer, </div><div class="line">for example.If I import java.util.*and javax.swing.*and then try to use &quot;Timer&quot;, I get an error while compiling(the class name is ambiguous between both packages).</div><div class="line">Let&apos;s say what you really wanted was the javax.swing.Timer class, and the only classes you plan on using in java.util are Collection and HashMap. </div><div class="line">In this case, some people will prefer to import java.util.Collection and import java.util.HashMap instead of importing java.util.*. </div><div class="line">This will now allow them to use Timer, Collection, HashMap, and other javax.swing classes without using fully qualified class names in.</div><div class="line"></div><div class="line">141 //Can a method be overloaded based on different return type but same argument type ?</div><div class="line">No, because the methods can be called without using their return type in which case there is ambiquity for the compiler.</div><div class="line"></div><div class="line">142 //What happens to a static variable that is defined within a method of a class ?</div><div class="line">Can&apos;t do it. You&apos;ll get a compilation error.</div><div class="line"></div><div class="line">143 //How many static initializers can you have ?</div><div class="line">As many as you want, but the static initializers and class variable initializers are executed in textual order and may not refer to class variables declared in the class </div><div class="line">whose declarations appear textually after the use, even though these class variables are in scope.</div><div class="line"></div><div class="line">144 //What is the difference between method overriding and overloading ?</div><div class="line">Overriding is a method with the same name and arguments as in a parent, whereas overloading is the same method name but different arguments</div><div class="line"></div><div class="line"></div><div class="line">145 //What is constructor chaining and how is it achieved in Java ?</div><div class="line">A child object constructor always first needs to construct its parent(which in turn calls its parent constructor.).In Java it is done via an implicit call </div><div class="line">to the no - args constructor as the first statement.</div><div class="line"></div><div class="line">146 //What is the difference between the Boolean &amp; operator and the &amp;&amp; operator ?</div><div class="line">If an expression involving the Boolean &amp; operator is evaluated, both operands are evaluated.Then the &amp; operator </div><div class="line">is applied to the operand.When an expression involving the &amp;&amp; operator is evaluated, the first operand is evaluated.</div><div class="line">If the first operand returns a value of true then the second operand is evaluated.The &amp;&amp; operator is then applied to the first and </div><div class="line">second operands.If the first operand evaluates to false, the evaluation of the second operand is skipped.</div><div class="line"></div><div class="line">147 //Which Java operator is right associative ?</div><div class="line">The = operator is right associative.</div><div class="line"></div><div class="line">148 //Can a double value be cast to a byte ?</div><div class="line">Yes, a double value can be cast to a byte.</div><div class="line"></div><div class="line">149 //What is the difference between a break statement and a continue statement ?</div><div class="line">A break statement results in the termination of the statement to which it applies(switch, for, do, or while).</div><div class="line">A continue statement is used to end the current loop iteration and return control to the loop statement.</div><div class="line"></div><div class="line">150 //Can a for statement loop indefinitely ?</div><div class="line">Yes, a for statement can loop indefinitely.For example, consider the following : for (;;);</div><div class="line"></div><div class="line"></div><div class="line">151 //To what value is a variable of the String type automatically initialized ?</div><div class="line">The default value of an String type is null.</div><div class="line"></div><div class="line">152 //What is the difference between a field variable and a local variable ?</div><div class="line">A field variable is a variable that is declared as a member of a class.A local variable is a variable that is declared local to a method.</div><div class="line"></div><div class="line">153//How are this() and super() used with constructors ?</div><div class="line">this() is used to invoke a constructor of the same class.super() is used to invoke a superclass constructor.</div><div class="line"></div><div class="line">154 //What does it mean that a class or member is final ?</div><div class="line">A final class cannot be inherited.A final method cannot be overridden in a subclass.A final field cannot be changed after it&apos;s initialized, and it must include an initializer statement where it&apos;s declared.</div><div class="line"></div><div class="line">155 //What does it mean that a method or class is abstract ?</div><div class="line">An abstract class cannot be instantiated.Abstract methods may only be included in abstract classes.However, an abstract class is not required to have any abstract methods, though most of them do.</div><div class="line">Each subclass of an abstract class must override the abstract methods of its superclasses or it also should be declared abstract.</div><div class="line"></div><div class="line">156 //What is a transient variable ?</div><div class="line">Transient variable is a variable that may not be serialized.</div><div class="line"></div><div class="line"></div><div class="line">157 //How does Java handle integer overflows and underflows ?</div><div class="line">It uses those low order bytes of the result that can fit into the size of the type allowed by the operation.</div><div class="line"></div><div class="line">158 //What is the difference between the &gt;&gt; and &gt;&gt; &gt; operators ?</div><div class="line">The &gt;&gt; operator carries the sign bit when shifting right.The &gt;&gt; &gt; zero - fills bits that have been shifted out.</div><div class="line"></div><div class="line">159 //Is sizeof a keyword ?</div><div class="line">The sizeof operator is not a keyword.</div><div class="line"></div><div class="line">160 hashmap implementation</div><div class="line"></div><div class="line"></div><div class="line">A hashmap works like this (this is a little bit simplified, but it illustrates the basic mechanism) :</div><div class="line"></div><div class="line">It has a number of &quot;buckets&quot; which it uses to store key - value pairs in. Each bucket has a unique number - </div><div class="line">that is what identifies the bucket. When you put a key-value pair into the map, the hashmap will look at the hash code of the key, </div><div class="line">and store the pair in the bucket of which the identifier is the hash code of the key. For example: The hash code of the key is 235 -&gt; </div><div class="line">the pair is stored in bucket number 235. (Note that one bucket can store more then one key-value pair).</div><div class="line"></div><div class="line">When you lookup a value in the hashmap, by giving it a key, it will first look at the hash code of the key that you gave.The hashmap will </div><div class="line">then look into the corresponding bucket, and then it will compare the key that you gave with the keys of all pairs in the bucket, by comparing them with equals().</div><div class="line"></div><div class="line">Now you can see how this is very efficient for looking up key - value pairs in a map : by the hash code of the key the hashmap </div><div class="line">immediately knows in which bucket to look, so that it only has to test against what&apos;s in that bucket.</div><div class="line"></div><div class="line">Looking at the above mechanism, you can also see what requirements are necessary on the hashCode() and equals() methods of keys :</div><div class="line"></div><div class="line">If two keys are the same(equals() returns true when you compare them), their hashCode() method must return the same number.If keys violate this,</div><div class="line">then keys that are equal might be stored in different buckets, and the hashmap would not be able to find key - value pairs(because it&apos;s going to look in the same bucket).</div><div class="line">If two keys are different, then it doesn&apos;t matter if their hash codes are the same or not. They will be stored in the same bucket</div><div class="line">if their hash codes are the same, and in this case, the hashmap will use equals() to tell them apart.</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">161 //synchronzed</div><div class="line">synchronized means that in a multi threaded environment, an object having  synchronized method(s) / block(s) does</div><div class="line">not let two threads to access the synchronized method(s) / block(s) of code at the same time.This means that one thread can&apos;t read while another thread updates it.</div><div class="line"></div><div class="line">The second thread will instead wait until the first thread completes its execution.The overhead is speed, but the advantage is guaranteed consistency of data.</div><div class="line"></div><div class="line">If your application is single threaded though, synchronized blocks does not provide benefits.</div><div class="line"></div><div class="line">161.1 //thread lock;</div><div class="line">Java ThreadLocal is used to create thread - local variables.We know that all threads of an Object share it’s variables,</div><div class="line">so if the variable is not thread safe, we can use synchronization but if we want to avoid synchronization, we can use ThreadLocal variables.</div><div class="line"></div><div class="line">162 //multithread</div><div class="line"></div><div class="line">By definition, multitasking is when multiple processes share common processing resources such as a CPU.</div><div class="line">Multi - threading extends the idea of multitasking into applications where you can subdivide specific operations within a single </div><div class="line">application into individual threads.Each of the threads can run in parallel.The OS divides processing time not only among different applications, but also among each thread within an application.</div><div class="line"></div><div class="line">Multi - threading enables you to write in a way where multiple activities can proceed concurrently in the same program.</div><div class="line">Every Java thread has a priority that helps the operating system determine the order in which threads are scheduled.</div><div class="line"></div><div class="line">Java thread priorities are in the range between MIN_PRIORITY(a constant of 1) and MAX_PRIORITY(a constant of 10).By default, every thread is given priority NORM_PRIORITY(a constant of 5).</div><div class="line"></div><div class="line">Threads with higher priority are more important to a program and should be allocated processor time before lower -</div><div class="line">priority threads.However, thread priorities cannot guarantee the order in which threads execute and are very much platform dependent.</div><div class="line"></div><div class="line">162.2 //advatages of java multithreading</div><div class="line"></div><div class="line">1) It doesn&apos;t block the user because threads are independent and you can perform multiple operations at same time.</div><div class="line"></div><div class="line">2) You can perform many operations together so it saves time.</div><div class="line"></div><div class="line">3) Threads are independent so it doesn&apos;t affect other threads if exception occur in a single thread.</div><div class="line"></div><div class="line"></div><div class="line">163 //diff between thread and process</div><div class="line">What is the difference between Process and Thread ?</div><div class="line"></div><div class="line">A process is a self contained execution environment and it can be seen as a program or application whereas Thread is a single task of execution within the process.</div><div class="line">Java runtime environment runs as a single process which contains different classes and programs as processes.</div><div class="line">Thread can be called lightweight process.Thread requires less resources to create and exists in the process, thread shares the process resources.</div><div class="line"></div><div class="line"></div><div class="line">22 thread</div><div class="line">Thread :</div><div class="line">A thread is a series of executed statements</div><div class="line">Referred as lightweight process</div><div class="line">Each thread has its own program counter, stack and local variable</div><div class="line"></div><div class="line">life cycle</div><div class="line">New :</div><div class="line">The thread is in new state if you create an instance of Thread class but before the invocation of start() method</div><div class="line"></div><div class="line">Runnable</div><div class="line">The thread is in runnable state after invocation of start() method, but the thread scheduler has not selected it to be the running thread</div><div class="line"></div><div class="line">Running</div><div class="line"></div><div class="line">The thread is in running state if the thread scheduler has selected</div><div class="line"></div><div class="line">Blocked</div><div class="line">This is the state when the thread is still alive, but is currently not eligible to run</div><div class="line"></div><div class="line">Terminated</div><div class="line">A thread is in terminated or dead when its run() method exit</div><div class="line"></div><div class="line">23 two ways to start a thread</div><div class="line">Implement runnable or extends Thread</div><div class="line">Implement of run()</div><div class="line"></div><div class="line">(new Thread(new HelloRunnable())).start();//implements the runnable</div><div class="line"></div><div class="line">(new HelloThread()).start();//extends thread</div><div class="line"></div><div class="line">24 thread method</div><div class="line">String getName()  retrieves the same of running thread in the current context in string format</div><div class="line">Void start() this method will start a new thread of execution by calling run() method of Thread / runnable object</div><div class="line">Void run() this method is the entry point of the thread, execution of thread starts from this method</div><div class="line"></div><div class="line">Void sleep() this method suspend the thread for  mentioned time duration in argument</div><div class="line"></div><div class="line">Void yield() by invoking this method the current thread pause its execution temporarily and allow other threads to exectute</div><div class="line"></div><div class="line">Void join() this method is used to queue up a thread in execution, once called on thread, current thread will wait till calling thread completes its exectution</div><div class="line"></div><div class="line">Boolean isAlive() this method will check if thread is alive or dead</div><div class="line"></div><div class="line"></div><div class="line">164//thread communicate with each other</div><div class="line">When threads share resources, communication between Threads is important to coordinate their efforts.Object </div><div class="line">class wait(), notify() and notifyAll() methods allows threads to communicate about the lock status of a resource.Check this post to learn more about thread wait, notify and notifyAll.</div><div class="line"></div><div class="line">165 //volatile keyword</div><div class="line">When we use volatile keyword with a variable, </div><div class="line">all the threads read it’s value directly from the memory and don’t cache it.This makes sure that the value read is the same as in the memory.</div><div class="line"></div><div class="line">166 //thread deadlock</div><div class="line">Deadlock is a programming situation where two threads wait for each other to take action which allows them to move further.</div><div class="line"></div><div class="line">To analyze a deadlock, we need to look at the java thread dump of the application, we need to look out for the threads with state as BLOCKED and then the resources</div><div class="line">it’s waiting to lock, every resource has a unique ID using which we can find which thread is already holding the lock on the object.</div><div class="line"></div><div class="line">Avoid Nested Locks, Lock Only What is Required and Avoid waiting indefinitely are common ways to avoid deadlock situation, read this post to learn how to analyze deadlock in java with sample program</div><div class="line"></div><div class="line">//167 thread pool</div><div class="line">A thread pool manages the pool of worker threads, it contains a queue that keeps tasks waiting to get executed.</div><div class="line">A thread pool manages the collection of Runnable threads and worker threads execute Runnable from the queue.</div><div class="line">java.util.concurrent.Executors provide implementation of java.util.concurrent.Executor interface to create the thread pool in java.</div><div class="line">Thread Pool Example program shows how to create and use Thread Pool in java.Or read ScheduledThreadPoolExecutor Example to know how to schedule tasks after certain delay.</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/java/">java</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/10/10/os/">
+        <span class="next-text nav-default">os</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wangtaoo665@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Tao</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/10/11/JavaInterviewQuestions/';
+        this.page.identifier = '2017/10/11/JavaInterviewQuestions/';
+        this.page.title = 'JavaInterviewQuestions';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//taobupt.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            Read more..
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

@@ -45,7 +45,7 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/LCsKGAxGHnyEs3EANY4n5P5ya_L5azYKGW7SIYW0x9kT6rjv4HDMJ1m28m_oLC9m-nv1d2TQhZeo9toGwMXvY8Gm5qDkan67_B7N44A1Z4Px79mbe14fVOY9wXLQDusVqZ4_u4OXCg">
 <meta property="og:image" content="https://lh3.googleusercontent.com/fDOjO-LWHUQYO6aN5fW4FSSyM1e915oLf-bxJEg4ik7K4x6bAB9ndIbOLIF4khm82xKcYTY1FsyAe4XaQGld7bWYdqeN1ZEsC8guRAYBfi9upifgV3K_ChfsOh0Yv1JVEemRet9rLQ">
 <meta property="og:image" content="https://lh3.googleusercontent.com/7M3qBFqSKJfvj3cH8QWSvhHu9zw1v21cm74TlXJpPCmAb4udVkSJejbN8ZyA0u-XVNz5MN6AOb-i0cOWICj9XdtRqIsR3K31TGo5ZV1ntZRx6cvPV-NcV5V8fCfdGoe9uWcDcD39vA">
-<meta property="og:updated_time" content="2017-10-11T02:25:13.000Z">
+<meta property="og:updated_time" content="2017-10-11T21:39:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="os">
 <meta name="twitter:description" content="os questions review">
@@ -265,7 +265,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Process-vs-Thread"><span class="toc-text">Process vs Thread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Different-type-of-thread"><span class="toc-text">Different type of thread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#context-switch"><span class="toc-text">context switch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interrupt-and-system-call"><span class="toc-text">interrupt and system call</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#concurrent-technologies"><span class="toc-text">concurrent technologies</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#thread"><span class="toc-text">thread</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#critical-region-amp-resource"><span class="toc-text">critical region & resource</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#deadlock"><span class="toc-text">deadlock</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inter-process-communication"><span class="toc-text">Inter-process communication</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-management"><span class="toc-text">memory management</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Process-vs-Thread"><span class="toc-text">Process vs Thread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Different-type-of-thread"><span class="toc-text">Different type of thread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#context-switch"><span class="toc-text">context switch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interrupt-and-system-call"><span class="toc-text">interrupt and system call</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#concurrent-technologies"><span class="toc-text">concurrent technologies</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#process"><span class="toc-text">process</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#critical-region-amp-resource"><span class="toc-text">critical region & resource</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#deadlock"><span class="toc-text">deadlock</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inter-process-communication"><span class="toc-text">Inter-process communication</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-management"><span class="toc-text">memory management</span></a></li></ol>
     </div>
   </div>
 
@@ -339,7 +339,7 @@
 <p>when a process make a system call, which will cause an interruption and the process will change to kernal mode.</p>
 <p><strong>kernal mode</strong><br>In Kernel mode, the executing code has complete and unrestricted access to the underlying hardware. It can execute any CPU instruction and reference any memory address. Kernel mode is generally reserved for the lowest-level, most trusted functions of the operating system. Crashes in kernel mode are catastrophic; they will halt the entire PC.</p>
 <p><strong>user mode</strong><br>In User mode, the executing code has no ability to directly access hardware or reference memory. Code running in user mode must delegate to system APIs to access hardware or memory. Due to the protection afforded by this sort of isolation, crashes in user mode are always recoverable. Most of the code running on your computer will execute in user mode.</p>
-<h2 id="concurrent-technologies"><a href="#concurrent-technologies" class="headerlink" title="concurrent technologies"></a>concurrent technologies</h2><h3 id="thread"><a href="#thread" class="headerlink" title="thread"></a>thread</h3><ul>
+<h2 id="concurrent-technologies"><a href="#concurrent-technologies" class="headerlink" title="concurrent technologies"></a>concurrent technologies</h2><h3 id="process"><a href="#process" class="headerlink" title="process"></a>process</h3><ul>
 <li>An executing instance of a program</li>
 <li>text region, data region, code segment, stack region</li>
 </ul>
@@ -499,6 +499,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2017/10/11/JavaInterviewQuestions/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">JavaInterviewQuestions</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
     
       <a class="next" href="/2017/10/09/database/">
