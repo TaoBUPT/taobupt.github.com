@@ -5,7 +5,8 @@
     <entry>
       <title><![CDATA[JavaException]]></title>
       <url>/2017/10/18/JavaException/</url>
-      <content type="html"><![CDATA[<h2 id="customize-exception"><a href="#customize-exception" class="headerlink" title="customize exception"></a>customize exception</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class MyException extends RuntimeException&#123;</div><div class="line">    public MyException(String msg)&#123;</div><div class="line">        super(msg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="customize-exception"><a href="#customize-exception" class="headerlink" title="customize exception"></a>customize exception</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class MyException extends RuntimeException&#123;</div><div class="line">    public MyException(String msg)&#123;</div><div class="line">        super(msg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -26,7 +27,8 @@
     <entry>
       <title><![CDATA[JavaDataStructures]]></title>
       <url>/2017/10/18/JavaDataStructures/</url>
-      <content type="html"><![CDATA[<h2 id="java-data-structures"><a href="#java-data-structures" class="headerlink" title="java data structures"></a>java data structures</h2><ul>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="java-data-structures"><a href="#java-data-structures" class="headerlink" title="java data structures"></a>java data structures</h2><ul>
 <li>PriorityQueue</li>
 </ul>
 <p><img src="https://lh3.googleusercontent.com/DcQHnCuF4zf8wfyqHKwAavlBhFrTWq2LFwXJyr3hCKa79qfZvmDHtXXb4FZa8AZ0VjfU22rnRqpWXgB8PdQ1Z9bIuLm7RBQMk1V76tO3ig8mGEtszksY_iLGVipIo8HvYQ-cH-cdeg" alt="heap"></p>
