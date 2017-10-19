@@ -3,6 +3,93 @@
   
     
     <entry>
+      <title><![CDATA[UML]]></title>
+      <url>/2017/10/19/UML/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="Visibility"><a href="#Visibility" class="headerlink" title="Visibility"></a>Visibility</h2><table>
+<thead>
+<tr>
+<th>public</th>
+<th>private</th>
+<th>protected</th>
+<th>package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>-</td>
+<td>#</td>
+<td>~</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><table>
+<thead>
+<tr>
+<th>ClassName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- name: String <br> -id: int</td>
+<td></td>
+</tr>
+<tr>
+<td>+ getName(): String <br> + getId(): int</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h2><table>
+<thead>
+<tr>
+<th>&lt;&lt; interface &gt;&gt; <br> interface name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+ draw(): void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Enumeration"><a href="#Enumeration" class="headerlink" title="Enumeration"></a>Enumeration</h2><table>
+<thead>
+<tr>
+<th>&lt;&lt; enumeration &gt;&gt; <br> enumeration name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACE <br> ONE <br> TWO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Implements"><a href="#Implements" class="headerlink" title="Implements"></a>Implements</h2><p><img src="https://lh3.googleusercontent.com/pg5wXEd4iS29fbp6SfLrCwfvPX4MZCTX-FVDNHstVLCA0gIEpx42X3tpnVRbrfButmavgeFwmPkRMXDlQUBI2CqQ52MKdugz0N-LWCd6y0iBtTCYb_qsvUKxTNE_LagqZhKIWPgJZQ" alt="implementation"></p>
+<p><strong>——&gt;</strong> is dependency</p>
+<p><img src="https://lh3.googleusercontent.com/x8dTpof05ZFQ0cpQ0oKNo_dKT68KblcxaSHe5NNx_0ZDTt_184bXorFo_g_tktYxsn-3JvAU1rVQ9pa8_zzLqfaRGsp5BczyMMtYICkNwCmyDHBL9TSJQaRV0YReZ9TujSXK7E5r2w" alt=""> implement interface</p>
+<p><img src="https://lh3.googleusercontent.com/Ia4bDBUNIIJO-mV6fZZRSnIJj4px03DubtDhcKdrQB-bViQxV7e1mgb1Bcx2mfpQAQ5n5EzxNtF2J8a6NOxMA8O5I4iFruUmTe2YpDwD54F7Y2SnNqdblXf3qIfRHNbvpkkAF8kTVg" alt=""> extend parent class</p>
+<hr>
+]]></content>
+      
+        <categories>
+            
+            <category> fulltime </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> UML </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[BrainTeaserQuestions]]></title>
       <url>/2017/10/19/BrainTeaserQuestions/</url>
       <content type="html"><![CDATA[<a id="more"></a>
