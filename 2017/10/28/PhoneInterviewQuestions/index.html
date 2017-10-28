@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="tags"/>
+  <meta name="description" content="phone interview questions"/>
 
 
 
+
+  <meta name="keywords" content="interview," />
 
 
 
@@ -29,19 +31,20 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/tags/"/>
+<link rel="canonical" href="http://yoursite.com/2017/10/28/PhoneInterviewQuestions/"/>
 
 
-<meta name="description" content="blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="phone interview questions">
+<meta name="keywords" content="interview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PhoneInterviewQuestions">
+<meta property="og:url" content="http://yoursite.com/2017/10/28/PhoneInterviewQuestions/index.html">
 <meta property="og:site_name" content="Stewart">
-<meta property="og:description" content="blogs">
-<meta property="og:updated_time" content="2017-07-16T23:26:20.000Z">
+<meta property="og:description" content="phone interview questions">
+<meta property="og:updated_time" content="2017-10-28T21:28:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="blogs">
+<meta name="twitter:title" content="PhoneInterviewQuestions">
+<meta name="twitter:description" content="phone interview questions">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
@@ -80,7 +83,7 @@
 
 
 
-    <title> Tags · Stewart </title>
+    <title> PhoneInterviewQuestions · Stewart </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -236,14 +239,99 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <div class="tag-cloud">
-    <div class="tag-cloud-title">
-      17 Tags In Total
-    </div>
-    <div class="tag-cloud-tags">
-      <a href="/tags/offer/" style="font-size: 16px;">offer</a> <a href="/tags/bfs/" style="font-size: 16px;">bfs</a> <a href="/tags/behavior-questions/" style="font-size: 16px;">behavior-questions</a> <a href="/tags/algorithms/" style="font-size: 16px;">algorithms</a> <a href="/tags/puzzles/" style="font-size: 16px;">puzzles</a> <a href="/tags/java/" style="font-size: 28px;">java</a> <a href="/tags/dfs/" style="font-size: 16px;">dfs</a> <a href="/tags/thread/" style="font-size: 16px;">thread</a> <a href="/tags/backtracking/" style="font-size: 16px;">backtracking</a> <a href="/tags/interview/" style="font-size: 16px;">interview</a> <a href="/tags/UML/" style="font-size: 16px;">UML</a> <a href="/tags/full-time/" style="font-size: 16px;">full-time</a> <a href="/tags/git/" style="font-size: 16px;">git</a> <a href="/tags/database/" style="font-size: 16px;">database</a> <a href="/tags/ruby/" style="font-size: 16px;">ruby</a> <a href="/tags/os/" style="font-size: 16px;">os</a> <a href="/tags/stack/" style="font-size: 16px;">stack</a>
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          PhoneInterviewQuestions
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Oct 28, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#parent-companies-and-child-companies"><span class="toc-text">parent companies and child companies</span></a></li></ol>
     </div>
   </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="parent-companies-and-child-companies"><a href="#parent-companies-and-child-companies" class="headerlink" title="parent companies and child companies"></a>parent companies and child companies</h3><p>给出parent company， child company pairs</p>
+<ol>
+<li>给出一个child company， 然后找到parent company</li>
+<li>判断两个company是不是related的</li>
+</ol>
+<p>后面交谈才知道面试官想要一个hashmap搞定这两题。第二问我一开始说用并查集，他说不知道并查集，我就尝试解释，但是我后来放弃了，然后又尝试建图，但他说只要一个map。<br>于是就浪费了很久的时间。hr说45分钟的时间，到了47分钟的时候，我才说出用递归查找，最后他让我写完了，结束时间是57分钟？太可惜了，真想扇自己。。。<br>关于第二问： 假设输入是(A,B),(A,C),(B,G),(C,D),(B,H) 格式是(parent, child), 会叫你求isRelated(D,H)之类的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//应该还能用dp缓存以下，感兴趣的自己去研究下</div><div class="line">Map&lt;String,String&gt;map = new HashMap&lt;&gt;();//key is child, value is parent</div><div class="line">    public boolean isRelated(String companyA, String companyB)&#123;</div><div class="line">        if(!map.containsKey(companyA)||!map.containsKey(companyB))</div><div class="line">            return false;</div><div class="line">        if(map.get(companyA).equals(companyB)||map.get(companyB).equals(companyA))</div><div class="line">            return true;</div><div class="line">        String parentA = map.get(companyA);</div><div class="line">        String parentB = map.get(companyB);</div><div class="line">        return isRelated(companyA,parentB)||isRelated(parentA,companyB);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/interview/">interview</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/10/19/UML/">
+        <span class="next-text nav-default">UML</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
@@ -335,9 +423,9 @@
   
   <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/tags/index.html';
-        this.page.identifier = 'tags/index.html';
-        this.page.title = 'tags';
+        this.page.url = 'http://yoursite.com/2017/10/28/PhoneInterviewQuestions/';
+        this.page.identifier = '2017/10/28/PhoneInterviewQuestions/';
+        this.page.title = 'PhoneInterviewQuestions';
     };
     (function() {
     var d = document, s = d.createElement('script');
