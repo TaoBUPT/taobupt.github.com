@@ -3,6 +3,52 @@
   
     
     <entry>
+      <title><![CDATA[GraphQuestions]]></title>
+      <url>/2017/12/22/GraphQuestions/</url>
+      <content type="html"><![CDATA[<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><hr>
+<a id="more"></a>
+<ul>
+<li>743 Network Delay Time</li>
+</ul>
+<h3 id="743-Network-Delay-Time"><a href="#743-Network-Delay-Time" class="headerlink" title="743 Network Delay Time"></a>743 Network Delay Time</h3><p>GeeksForGeesk 上是无向图，然后直接用那种方法做的，结果就错了，后来看了看dijkstra有向图和无向图都可以处理。翻开了算法导论，重新看了下，发现用优先级队列做比较好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public int networkDelayTime(int[][] times, int N, int K) &#123;</div><div class="line">        Map&lt;Integer,List&lt;Integer&gt;&gt;map=new HashMap&lt;&gt;();</div><div class="line">        int [][]adj = new int[N+1][N+1];</div><div class="line">        for(int[]time:times)&#123;</div><div class="line">            adj[time[0]][time[1]]=time[2];</div><div class="line">            if(!map.containsKey(time[0]))&#123;</div><div class="line">                map.put(time[0],new ArrayList&lt;&gt;());</div><div class="line">            &#125;</div><div class="line">            map.get(time[0]).add(time[1]);</div><div class="line">        &#125;</div><div class="line">        int []dist = new int[N+1];</div><div class="line">        Arrays.fill(dist,Integer.MAX_VALUE);</div><div class="line">        dist[K]=0;</div><div class="line">        PriorityQueue&lt;Integer&gt;pq = new PriorityQueue&lt;&gt;(new Comparator&lt;Integer&gt;() &#123;</div><div class="line">            @Override</div><div class="line">            public int compare(Integer o1, Integer o2) &#123;</div><div class="line">                return dist[o1]-dist[o2];</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        pq.offer(K);</div><div class="line"></div><div class="line">        int ans = 0;</div><div class="line">        while(!pq.isEmpty())&#123;</div><div class="line">            int u = pq.poll();</div><div class="line">            ans = Math.max(ans,dist[u]);</div><div class="line">            List&lt;Integer&gt;neighbors = map.getOrDefault(u,new ArrayList&lt;&gt;());</div><div class="line">            for(int neighbor:neighbors)&#123;</div><div class="line">                if(dist[neighbor]&gt;dist[u]+adj[u][neighbor])&#123;</div><div class="line">                    pq.remove(neighbor);</div><div class="line">                    dist[neighbor] = dist[u]+adj[u][neighbor];</div><div class="line">                    pq.offer(neighbor);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        for(int i=1;i&lt;=N;++i)&#123;</div><div class="line">            ans = Math.max(ans,dist[i]);</div><div class="line">        &#125;</div><div class="line">        return ans== Integer.MAX_VALUE?-1:ans;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> leetcode </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> graph </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[RegularExpression]]></title>
+      <url>/2017/11/05/RegularExpression/</url>
+      <content type="html"><![CDATA[<h2 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pattern = &apos;\w+@(\w+\.)+\w+&apos;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> work </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> match </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PhoneInterviewQuestions]]></title>
       <url>/2017/10/28/PhoneInterviewQuestions/</url>
       <content type="html"><![CDATA[<h3 id="parent-companies-and-child-companies"><a href="#parent-companies-and-child-companies" class="headerlink" title="parent companies and child companies"></a>parent companies and child companies</h3><p>给出parent company， child company pairs</p>

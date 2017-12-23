@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="blogs"/>
+  <meta name="description" content="graph questions review"/>
 
 
 
+
+  <meta name="keywords" content="graph," />
 
 
 
@@ -29,18 +31,20 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/"/>
+<link rel="canonical" href="http://yoursite.com/2017/12/22/GraphQuestions/"/>
 
 
-<meta name="description" content="blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Stewart">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="graph questions review">
+<meta name="keywords" content="graph">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GraphQuestions">
+<meta property="og:url" content="http://yoursite.com/2017/12/22/GraphQuestions/index.html">
 <meta property="og:site_name" content="Stewart">
-<meta property="og:description" content="blogs">
+<meta property="og:description" content="graph questions review">
+<meta property="og:updated_time" content="2017-12-23T05:36:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stewart">
-<meta name="twitter:description" content="blogs">
+<meta name="twitter:title" content="GraphQuestions">
+<meta name="twitter:description" content="graph questions review">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
@@ -79,7 +83,7 @@
 
 
 
-    <title> Stewart </title>
+    <title> GraphQuestions · Stewart </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -235,14 +239,12 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
-      
+  
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2017/12/22/GraphQuestions/">GraphQuestions</a>
+          GraphQuestions
         
       </h1>
 
@@ -255,424 +257,95 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Review"><span class="toc-text">Review</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#743-Network-Delay-Time"><span class="toc-text">743 Network Delay Time</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
 
     <div class="post-content">
       
-        
-        
-          
-        
-
-        
-          <p>graph questions review</p>
-          <div class="read-more">
-            <a href="/2017/12/22/GraphQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
+        <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><hr>
+<a id="more"></a>
+<ul>
+<li>743 Network Delay Time</li>
+</ul>
+<h3 id="743-Network-Delay-Time"><a href="#743-Network-Delay-Time" class="headerlink" title="743 Network Delay Time"></a>743 Network Delay Time</h3><p>GeeksForGeesk 上是无向图，然后直接用那种方法做的，结果就错了，后来看了看dijkstra有向图和无向图都可以处理。翻开了算法导论，重新看了下，发现用优先级队列做比较好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public int networkDelayTime(int[][] times, int N, int K) &#123;</div><div class="line">        Map&lt;Integer,List&lt;Integer&gt;&gt;map=new HashMap&lt;&gt;();</div><div class="line">        int [][]adj = new int[N+1][N+1];</div><div class="line">        for(int[]time:times)&#123;</div><div class="line">            adj[time[0]][time[1]]=time[2];</div><div class="line">            if(!map.containsKey(time[0]))&#123;</div><div class="line">                map.put(time[0],new ArrayList&lt;&gt;());</div><div class="line">            &#125;</div><div class="line">            map.get(time[0]).add(time[1]);</div><div class="line">        &#125;</div><div class="line">        int []dist = new int[N+1];</div><div class="line">        Arrays.fill(dist,Integer.MAX_VALUE);</div><div class="line">        dist[K]=0;</div><div class="line">        PriorityQueue&lt;Integer&gt;pq = new PriorityQueue&lt;&gt;(new Comparator&lt;Integer&gt;() &#123;</div><div class="line">            @Override</div><div class="line">            public int compare(Integer o1, Integer o2) &#123;</div><div class="line">                return dist[o1]-dist[o2];</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        pq.offer(K);</div><div class="line"></div><div class="line">        int ans = 0;</div><div class="line">        while(!pq.isEmpty())&#123;</div><div class="line">            int u = pq.poll();</div><div class="line">            ans = Math.max(ans,dist[u]);</div><div class="line">            List&lt;Integer&gt;neighbors = map.getOrDefault(u,new ArrayList&lt;&gt;());</div><div class="line">            for(int neighbor:neighbors)&#123;</div><div class="line">                if(dist[neighbor]&gt;dist[u]+adj[u][neighbor])&#123;</div><div class="line">                    pq.remove(neighbor);</div><div class="line">                    dist[neighbor] = dist[u]+adj[u][neighbor];</div><div class="line">                    pq.offer(neighbor);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        for(int i=1;i&lt;=N;++i)&#123;</div><div class="line">            ans = Math.max(ans,dist[i]);</div><div class="line">        &#125;</div><div class="line">        return ans== Integer.MAX_VALUE?-1:ans;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
       
     </div>
 
     
-
-    
-
-  </article>
-
-    
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/11/05/RegularExpression/">RegularExpression</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Nov 5, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
       
-        
-        
-          
-        
 
-        
-          <p>common regular expression</p>
-          <div class="read-more">
-            <a href="/2017/11/05/RegularExpression/" class="read-more-link">Read more..</a>
-          </div>
-        
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
       
     </div>
+  </div>
 
     
 
     
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
+      <footer class="post-footer">
         
-          <a class="post-link" href="/2017/10/28/PhoneInterviewQuestions/">PhoneInterviewQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 28, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>phone interview questions</p>
-          <div class="read-more">
-            <a href="/2017/10/28/PhoneInterviewQuestions/" class="read-more-link">Read more..</a>
+          <div class="post-tags">
+            
+              <a href="/tags/graph/">graph</a>
+            
           </div>
         
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
         
-          <a class="post-link" href="/2017/10/19/UML/">UML</a>
         
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 19, 2017
-        </span>
-      </div>
-    </header>
-
+  <nav class="post-nav">
     
     
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>draw uml</p>
-          <div class="read-more">
-            <a href="/2017/10/19/UML/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/10/19/BrainTeaserQuestions/">BrainTeaserQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 19, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>brain teaser questions</p>
-          <div class="read-more">
-            <a href="/2017/10/19/BrainTeaserQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/10/18/JavaException/">JavaException</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 18, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>java customize exception</p>
-          <div class="read-more">
-            <a href="/2017/10/18/JavaException/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/10/18/JavaDataStructures/">JavaDataStructures</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 18, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>java data structures review</p>
-          <div class="read-more">
-            <a href="/2017/10/18/JavaDataStructures/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/10/16/BehaviorQuestions/">BehaviorQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 16, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>behavior questions review</p>
-          <div class="read-more">
-            <a href="/2017/10/16/BehaviorQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/10/11/JavaInterviewQuestions/">JavaInterviewQuestions</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 11, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>java questions review</p>
-          <div class="read-more">
-            <a href="/2017/10/11/JavaInterviewQuestions/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/10/10/os/">os</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          Oct 10, 2017
-        </span>
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>os questions review</p>
-          <div class="read-more">
-            <a href="/2017/10/10/os/" class="read-more-link">Read more..</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
-    
-      <a class="next" href="/page/2/">
-        <span class="next-text">Next</span>
+      <a class="next" href="/2017/11/05/RegularExpression/">
+        <span class="next-text nav-default">RegularExpression</span>
+        <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>  
       </main>
@@ -747,6 +420,24 @@
     </div>
 
     
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/12/22/GraphQuestions/';
+        this.page.identifier = '2017/12/22/GraphQuestions/';
+        this.page.title = 'GraphQuestions';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//taobupt.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
 
 
     
