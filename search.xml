@@ -3,6 +3,70 @@
   
     
     <entry>
+      <title><![CDATA[deploy-flask-heroku]]></title>
+      <url>/2017/12/26/deploy-flask-heroku/</url>
+      <content type="html"><![CDATA[<h2 id="building-flask-with-virtualenv"><a href="#building-flask-with-virtualenv" class="headerlink" title="building flask with virtualenv"></a>building flask with virtualenv</h2><ul>
+<li>install virtualenv</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install virtualenv</div></pre></td></tr></table></figure>
+<ul>
+<li>setup a project with virtualenv</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">virtualenv helloflask</div></pre></td></tr></table></figure>
+<ul>
+<li>activate your project</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd helloflask</div><div class="line">source bin/activate (&apos;deactivate&apos; is another command)</div></pre></td></tr></table></figure>
+<ul>
+<li>install flask</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pip install flask</div><div class="line">#This installs Flask, Werkzeug (a utility library) </div><div class="line">and Jinja (a templating framework).</div></pre></td></tr></table></figure>
+<ul>
+<li>create app.py</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">from flask import Flask</div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line">@app.route(&quot;/&quot;)</div><div class="line">def hello():</div><div class="line">    return &quot;Hello World!&quot;</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    app.run()</div></pre></td></tr></table></figure>
+<ul>
+<li>run your app</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python app.py</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="deploy-to-heroku"><a href="#deploy-to-heroku" class="headerlink" title="deploy to heroku"></a>deploy to heroku</h2><ul>
+<li>install gunicorn</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Heroku seems to prefer a web server called gunicorn</div><div class="line">pip install gunicorn</div></pre></td></tr></table></figure>
+<ul>
+<li>add a requirements.txt</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip freeze -l &gt; requirements.txt</div></pre></td></tr></table></figure>
+<ul>
+<li>add a runtime.txt to specify your python version</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># get your python version: python --version</div><div class="line">vim runtime.txt</div><div class="line">python-3.6.2</div></pre></td></tr></table></figure>
+<ul>
+<li>create a Procfile (app:app the first app should your python file name)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vim Procfile</div><div class="line">web: gunicorn app:app</div></pre></td></tr></table></figure>
+<ul>
+<li>git &amp; heroku</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add .</div><div class="line">git commit -m &quot;first draft&quot;</div><div class="line"># you should know some knowledge about heroku login before </div><div class="line">heroku create # will create a ***.git</div><div class="line"></div><div class="line"></div><div class="line">#if you do heroku create before git init, you should use below command</div><div class="line">git remote add heroku https://git.heroku.com/gentle-dawn-27343.git</div><div class="line"></div><div class="line">git heroku master</div><div class="line">heroku open</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> flask </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Tamu]]></title>
       <url>/2017/12/23/Tamu/</url>
       <content type="html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/QKAImSBHQSNeDUCNpUsPKjLNd4gOk2cy2kS82O8zAoMCHnC8lsZXqs6VjZonfOQZnQ7UAn7aTDeMs5LIsVz-QyHnhcxQfUS4T4Px33L5-ZxJaFxbj-J5XkXMNMRScvfhaUtCk5SsKg" alt=""></p>
