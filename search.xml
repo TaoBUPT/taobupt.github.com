@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[oozie_distcp]]></title>
+      <url>/2018/06/29/oozie-distcp/</url>
+      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><hr>
+<p>隔壁 infra team 没有用一个统一的管理工具去管理cluster，每次来了一批新机器都是用脚本配置环境的，如果脚本有改动，每个批次的机器的环境就不一样了，同样的程序在不同的机器上的执行结果可能不一样。目前Ocean CI 上有<strong>2/3</strong>的机器是hadoop 身份配置的，剩下的都是以yarn的身份起来的。我这次的任务就是把cluster上的数据拷到s3上。我们最初的想法是用写个简单的shell脚本扔到oozie里面，但是发现当oozie job deploy后，在不同的机器上，起shell的身份不同，若果是yarn的身份起来的话，读取目录很有可能没有权限，这样无论是读写都会出现问题。</p>
+<hr>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><hr>
+<p>我们去找他们组的人交流这个问题，他们是强烈不建议我们使用shell的。当然如果cluster 上千台机器的配置都是一样的，就不会出现这样的问题。但是不用shell的话，我们需要重新dev。职场就是这样，大家多多少少都在推卸责任，如果你在职场上没有见到dirty的事情，那么必定是有人替你抵挡住dirty的事情。僵持不下。我们有两种back up plan。</p>
+<ul>
+<li>oozie 的distcp action</li>
+<li>java</li>
+</ul>
+<p>整体来说oozie的distcp action 要简单，但是没有谁用过，我们还有配置额外的参数，主要是调mapper的数量，默认是20-30个mapper，数据量一大，20-30个mapper肯定忙不过来。java的方法配置的东西很多，Sijia 那边有类似的code可以看看。两边的effort可能差不多。想着以后说不定也遇到这种情况，从长期来开还是explore oozie的方法比较好。</p>
+<hr>
+<h2 id="dev"><a href="#dev" class="headerlink" title="dev"></a>dev</h2><p>遇到的问题还是挺多的，有针对性的列几点</p>
+<ol>
+<li><strong>fs:exists(string path)</strong>: 注意要用concate 连接起来，variable的话直接用variable,不需要 ${variable}.</li>
+<li><strong>distcp paramaters</strong>: 参考下面code</li>
+<li><strong>Dfs.s3n.awsAccessKeyId=${s3_key}</strong>: s3_key 和 s3_sercret 初始化的时候不能带引号</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;start to=&quot;decision&quot;/&gt;</div><div class="line">&lt;decision name=&quot;decision&quot;&gt;</div><div class="line">  &lt;switch&gt;</div><div class="line">    &lt;case to=&quot;data-distcp&quot;&gt;$&#123;fs:exists(concate(nameNode,status_src_check))&#125;&lt;/case&gt;</div><div class="line">    &lt;default to=&quot;skip-trigger-distcp&quot;/&gt;</div><div class="line">  &lt;/switch&gt;</div><div class="line">&lt;/decision&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;action name=&quot;data-distcp&quot;&gt;</div><div class="line">  &lt;distcp xmlns=&quot;uir:oozie:distcp-action:0.2&quot;&gt;</div><div class="line">    &lt;arg&gt;-Dfs.s3n.awsAccessKeyId=$&#123;s3_key&#125;&lt;/arg&gt;</div><div class="line">    &lt;arg&gt;-Dfs.s3n.awsSecretAccessKey=$&#123;s3_secret&#125;&lt;/arg&gt;</div><div class="line">    &lt;arg&gt;-m&lt;/arg&gt;</div><div class="line">    &lt;arg&gt;300&lt;/arg&gt;</div><div class="line">    &lt;arg&gt;-update&lt;/arg&gt;</div><div class="line">    &lt;arg&gt;$&#123;nameNode1&#125;/$&#123;input&#125;&lt;/arg&gt;</div><div class="line">    &lt;arg&gt;$&#123;nameNode2&#125;/$&#123;output&#125;&lt;/arg&gt;</div><div class="line">  &lt;/distcp&gt;</div><div class="line">  &lt;ok to=&quot;status-distcp&quot;/&gt;</div><div class="line">  &lt;error to=&quot;data-fail&quot;/&gt;</div><div class="line">&lt;/action&gt;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> work </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> oozie </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[deploy-flask-heroku]]></title>
       <url>/2017/12/26/deploy-flask-heroku/</url>
       <content type="html"><![CDATA[<h2 id="building-flask-with-virtualenv"><a href="#building-flask-with-virtualenv" class="headerlink" title="building flask with virtualenv"></a>building flask with virtualenv</h2><ul>
