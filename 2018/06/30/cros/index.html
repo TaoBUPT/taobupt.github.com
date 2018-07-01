@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="categories"/>
+  <meta name="description" content="web application cros web"/>
 
 
 
+
+  <meta name="keywords" content="cros," />
 
 
 
@@ -29,19 +31,23 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/categories/"/>
+<link rel="canonical" href="http://yoursite.com/2018/06/30/cros/"/>
 
 
-<meta name="description" content="blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="web application cros web">
+<meta name="keywords" content="cros">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cros">
+<meta property="og:url" content="http://yoursite.com/2018/06/30/cros/index.html">
 <meta property="og:site_name" content="Stewart">
-<meta property="og:description" content="blogs">
-<meta property="og:updated_time" content="2017-07-16T23:26:57.000Z">
+<meta property="og:description" content="web application cros web">
+<meta property="og:image" content="https://lh3.googleusercontent.com/lfzp-kuvBxuZ82DTfnMIRYtJ2V75pDg5d7gzZhVFc9YaUR2gLuocH5uIkg0aCnebkEP6D8E1Irs88_Ehy5t3NzirAAxsr_-vUwA6aXKlhdZcq3fMaxrQMCBXCfeZHDAwRbC2naImBA=w2400">
+<meta property="og:image" content="https://lh3.googleusercontent.com/_npU9Oaxu_9FQoohJteJxKCTdgtyr5SiYPPnFa6bOAs_59RFnh6hn2xTrq7XvzsyaFwB_cfEnBY68I8FcNQzKvGOEJhzWTe2-pisRHFkB7M4im0LAoVxIYR84FBEm7xn2NJiyh1Gjw=w2400">
+<meta property="og:updated_time" content="2018-07-01T00:19:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="blogs">
+<meta name="twitter:title" content="cros">
+<meta name="twitter:description" content="web application cros web">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/lfzp-kuvBxuZ82DTfnMIRYtJ2V75pDg5d7gzZhVFc9YaUR2gLuocH5uIkg0aCnebkEP6D8E1Irs88_Ehy5t3NzirAAxsr_-vUwA6aXKlhdZcq3fMaxrQMCBXCfeZHDAwRbC2naImBA=w2400">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
@@ -80,7 +86,7 @@
 
 
 
-    <title> Categories · Stewart </title>
+    <title> cros · Stewart </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -236,14 +242,114 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <div class="categories">
-    <div class="categories-title">
-      8 Categories In Total
-    </div>
-    <div class="categories-tags">
-      <a class="category-link" href="/categories/database/">database<span class="category-count">1</span></a> <a class="category-link" href="/categories/fulltime/">fulltime<span class="category-count">7</span></a> <a class="category-link" href="/categories/leetcode/">leetcode<span class="category-count">6</span></a> <a class="category-link" href="/categories/os/">os<span class="category-count">2</span></a> <a class="category-link" href="/categories/python/">python<span class="category-count">1</span></a> <a class="category-link" href="/categories/review/">review<span class="category-count">1</span></a> <a class="category-link" href="/categories/travel/">travel<span class="category-count">1</span></a> <a class="category-link" href="/categories/work/">work<span class="category-count">6</span></a>
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          cros
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jun 30, 2018
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#起因"><span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#探索"><span class="toc-text">探索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方案"><span class="toc-text">方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
     </div>
   </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>做PTP collector Monitoring 的时候WebStrom前端给IntelliJ Idea的后端请求数据的时候出现 <strong>No ‘Access-Control-Allow-Origin’ header is present on the requested resource. Origin ‘<a href="http://localhost:4200" target="_blank" rel="external">http://localhost:4200</a>‘ is therefore not allowed access.</strong><br>这种错误遇到很多次了，之前实习的时候做的web程序也会出现这样的错误。知道是cros的问题，当时为了快速fix，就用了jsonp，现在又遇了，自然是不能放过了.</p>
+<hr>
+<h2 id="探索"><a href="#探索" class="headerlink" title="探索"></a>探索</h2><p>CROS(Cross-Origin resouce sharing), 允许browser向跨域server发出XMLHttpRequest请求，从而克服AJAX只能同源使用的限制</p>
+<ol>
+<li>整个CROS通信过程对用户是透明的，和同源通信没有差别，浏览器会为CROS通信加一点头信息</li>
+<li>两种请求<ul>
+<li>简单请求:请求方法是HEAD|GET|POST; HTTP头信息不超过以下几种字段: Accept, Accept-Language, Content-Language, Last-event-ID, Content-Type是 appliaction/x-www.form-urlencoded|multipart/form-data|text/plain</li>
+<li>非简单请求:不满足简单请求的条件。 </li>
+</ul>
+</li>
+<li>对于简单请求，浏览器直接发出CROS请求，header增加一个Origin字段。如果Origin 指定的源不再许可范围内，服务器会返回一个正常的HTTP回应，但是回应的头信息没有包含Access-Control-Allow-Origin 字段就知道出错了</li>
+<li>对于非简单请求，会在正式通信之前增加一次HTTP 查询请求，称为“预检”请求。主要是询问服务器，origin是否在许可范围内。得到肯定回复后，才会发正式的cros请求，否则报错.</li>
+</ol>
+<hr>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>只要在server端配置好允许cross就行了。现在用的是sprintboot，参考下面的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@CrossOrigin</div><div class="line">@RequestMapping(value=&quot;Ids&quot;, method= RequestMethod.GET)</div><div class="line">@ResponseBody</div><div class="line">public List&lt;ResourceUsage&gt;getResourceUsageForAllApplicationIds()&#123;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>附上两张对比图，一张允许CrossOrigin, 一张不允许</p>
+<p><img src="https://lh3.googleusercontent.com/lfzp-kuvBxuZ82DTfnMIRYtJ2V75pDg5d7gzZhVFc9YaUR2gLuocH5uIkg0aCnebkEP6D8E1Irs88_Ehy5t3NzirAAxsr_-vUwA6aXKlhdZcq3fMaxrQMCBXCfeZHDAwRbC2naImBA=w2400" alt="allow CrossOrigin"></p>
+<p><img src="https://lh3.googleusercontent.com/_npU9Oaxu_9FQoohJteJxKCTdgtyr5SiYPPnFa6bOAs_59RFnh6hn2xTrq7XvzsyaFwB_cfEnBY68I8FcNQzKvGOEJhzWTe2-pisRHFkB7M4im0LAoVxIYR84FBEm7xn2NJiyh1Gjw=w2400" alt="CrossOrigin not allowed"></p>
+<hr>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="external">阮一峰</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/cros/">cros</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/06/30/postman/">
+        <span class="next-text nav-default">postman</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
@@ -335,9 +441,9 @@
   
   <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/categories/index.html';
-        this.page.identifier = 'categories/index.html';
-        this.page.title = 'categories';
+        this.page.url = 'http://yoursite.com/2018/06/30/cros/';
+        this.page.identifier = '2018/06/30/cros/';
+        this.page.title = 'cros';
     };
     (function() {
     var d = document, s = d.createElement('script');

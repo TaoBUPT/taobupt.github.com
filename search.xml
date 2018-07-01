@@ -3,6 +3,80 @@
   
     
     <entry>
+      <title><![CDATA[cros]]></title>
+      <url>/2018/06/30/cros/</url>
+      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>做PTP collector Monitoring 的时候WebStrom前端给IntelliJ Idea的后端请求数据的时候出现 <strong>No ‘Access-Control-Allow-Origin’ header is present on the requested resource. Origin ‘<a href="http://localhost:4200" target="_blank" rel="external">http://localhost:4200</a>‘ is therefore not allowed access.</strong><br>这种错误遇到很多次了，之前实习的时候做的web程序也会出现这样的错误。知道是cros的问题，当时为了快速fix，就用了jsonp，现在又遇了，自然是不能放过了.</p>
+<hr>
+<h2 id="探索"><a href="#探索" class="headerlink" title="探索"></a>探索</h2><p>CROS(Cross-Origin resouce sharing), 允许browser向跨域server发出XMLHttpRequest请求，从而克服AJAX只能同源使用的限制</p>
+<ol>
+<li>整个CROS通信过程对用户是透明的，和同源通信没有差别，浏览器会为CROS通信加一点头信息</li>
+<li>两种请求<ul>
+<li>简单请求:请求方法是HEAD|GET|POST; HTTP头信息不超过以下几种字段: Accept, Accept-Language, Content-Language, Last-event-ID, Content-Type是 appliaction/x-www.form-urlencoded|multipart/form-data|text/plain</li>
+<li>非简单请求:不满足简单请求的条件。 </li>
+</ul>
+</li>
+<li>对于简单请求，浏览器直接发出CROS请求，header增加一个Origin字段。如果Origin 指定的源不再许可范围内，服务器会返回一个正常的HTTP回应，但是回应的头信息没有包含Access-Control-Allow-Origin 字段就知道出错了</li>
+<li>对于非简单请求，会在正式通信之前增加一次HTTP 查询请求，称为“预检”请求。主要是询问服务器，origin是否在许可范围内。得到肯定回复后，才会发正式的cros请求，否则报错.</li>
+</ol>
+<hr>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>只要在server端配置好允许cross就行了。现在用的是sprintboot，参考下面的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@CrossOrigin</div><div class="line">@RequestMapping(value=&quot;Ids&quot;, method= RequestMethod.GET)</div><div class="line">@ResponseBody</div><div class="line">public List&lt;ResourceUsage&gt;getResourceUsageForAllApplicationIds()&#123;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>附上两张对比图，一张允许CrossOrigin, 一张不允许</p>
+<p><img src="https://lh3.googleusercontent.com/lfzp-kuvBxuZ82DTfnMIRYtJ2V75pDg5d7gzZhVFc9YaUR2gLuocH5uIkg0aCnebkEP6D8E1Irs88_Ehy5t3NzirAAxsr_-vUwA6aXKlhdZcq3fMaxrQMCBXCfeZHDAwRbC2naImBA=w2400" alt="allow CrossOrigin"></p>
+<p><img src="https://lh3.googleusercontent.com/_npU9Oaxu_9FQoohJteJxKCTdgtyr5SiYPPnFa6bOAs_59RFnh6hn2xTrq7XvzsyaFwB_cfEnBY68I8FcNQzKvGOEJhzWTe2-pisRHFkB7M4im0LAoVxIYR84FBEm7xn2NJiyh1Gjw=w2400" alt="CrossOrigin not allowed"></p>
+<hr>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="external">阮一峰</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> work </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> cros </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[postman]]></title>
+      <url>/2018/06/30/postman/</url>
+      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>前段时间写了个递归查找hive table trigger的API。当时的逻辑是</p>
+<ol>
+<li>如果是table 是实体table，返回它的trigger。如果trigger 不存在，Log.error(table)，一般是最新的table，oozieviz 没有重新run。</li>
+<li>如果是table 是view，从viewsql里面找到所有的上游table，然后把上游table的triggers给这个view</li>
+</ol>
+<p>当时时间比较匆忙，就简单写了个api，通过get请求携带参数: ?tbl=xx&amp;tbl=xx&amp;tbl=xx. 如果table太多的话，就不能发get请求了。get请求最多允许2048个字节。于是想到了post请求。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>post 请求不太好用chrome 发出去，想到了postman。主要的问题有两个。</p>
+<ol>
+<li>每次后端起来都要login，于是在postman里面先发个post请求，在Body那块勾选form data，然后通过chrome看看到底发了哪些参数过去，照葫芦画瓢填写form data就可以</li>
+<li>发送list of tables. 还是在Body 那块，选择raw，json(application/json).</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	&quot;tbl&quot;:[&quot;xx&quot;,&quot;xx&quot;,&quot;xx&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>后端的get请求和post请求解析参数的方式是不一样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">locahost:8081/API/PTP/oozieviz/tablesTriggers?tbl=xx&amp;tbl=xx&amp;tbl=xx</div><div class="line"></div><div class="line">@RequestMapping(value=&quot;/tables/triggers&quot;, method=RequestMethod.GET)</div><div class="line">@ResponseBody</div><div class="line">public TablePTPDetailBody getTablesTriggers(</div><div class="line">	@RequestParam(required=true,value=&quot;tbl&quot;)List&lt;String&gt;tblNames</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">locahost:8081/API/PTP/oozieviz/tablesTriggers</div><div class="line"></div><div class="line">@RequestMapping(value=&quot;/tables/triggers&quot;, method=RequestMethod.POST)</div><div class="line">@ResponseBody</div><div class="line">public TablePTPDetailBody getTablesTriggers(</div><div class="line">@RequestBody Map&lt;String,Object&gt;payload</div><div class="line">)&#123;</div><div class="line">	List&lt;String&gt;tables = (List&lt;String&gt;)payload.get(&quot;tbl);	</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> work </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> http request </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[google_guava]]></title>
       <url>/2018/06/30/google-guava/</url>
       <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>昨天晚上闲自己的java code写的很一般，于是就把PTP的collector 部分的code拿来看，发现自己有很多地方需要学习。首先吸引我的是Google guava</p>

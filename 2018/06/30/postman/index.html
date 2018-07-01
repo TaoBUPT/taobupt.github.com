@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="blogs"/>
+  <meta name="description" content="postman send post request"/>
 
 
 
+
+  <meta name="keywords" content="http request," />
 
 
 
@@ -29,18 +31,20 @@
 
 
 
-<link rel="canonical" href="http://yoursite.com/archives/2018/"/>
+<link rel="canonical" href="http://yoursite.com/2018/06/30/postman/"/>
 
 
-<meta name="description" content="blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Stewart">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta name="description" content="postman send post request">
+<meta name="keywords" content="http request">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postman">
+<meta property="og:url" content="http://yoursite.com/2018/06/30/postman/index.html">
 <meta property="og:site_name" content="Stewart">
-<meta property="og:description" content="blogs">
+<meta property="og:description" content="postman send post request">
+<meta property="og:updated_time" content="2018-06-30T23:36:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stewart">
-<meta name="twitter:description" content="blogs">
+<meta name="twitter:title" content="postman">
+<meta name="twitter:description" content="postman send post request">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
@@ -79,11 +83,7 @@
 
 
 
-    <title>
-  
-    Archives · Stewart
-  
-</title>
+    <title> postman · Stewart </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -240,116 +240,125 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          postman
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jun 30, 2018
+        </span>
+      </div>
+    </header>
+
     
-      
-        <div class="archive-title">
-          <h2 class="archive-name"> All </h2>
-          <span class="archive-post-counter">
-            27 Posts In Total
-          </span>
-        </div>
-      
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#起因"><span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>前段时间写了个递归查找hive table trigger的API。当时的逻辑是</p>
+<ol>
+<li>如果是table 是实体table，返回它的trigger。如果trigger 不存在，Log.error(table)，一般是最新的table，oozieviz 没有重新run。</li>
+<li>如果是table 是view，从viewsql里面找到所有的上游table，然后把上游table的triggers给这个view</li>
+</ol>
+<p>当时时间比较匆忙，就简单写了个api，通过get请求携带参数: ?tbl=xx&amp;tbl=xx&amp;tbl=xx. 如果table太多的话，就不能发get请求了。get请求最多允许2048个字节。于是想到了post请求。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>post 请求不太好用chrome 发出去，想到了postman。主要的问题有两个。</p>
+<ol>
+<li>每次后端起来都要login，于是在postman里面先发个post请求，在Body那块勾选form data，然后通过chrome看看到底发了哪些参数过去，照葫芦画瓢填写form data就可以</li>
+<li>发送list of tables. 还是在Body 那块，选择raw，json(application/json).</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	&quot;tbl&quot;:[&quot;xx&quot;,&quot;xx&quot;,&quot;xx&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>后端的get请求和post请求解析参数的方式是不一样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">locahost:8081/API/PTP/oozieviz/tablesTriggers?tbl=xx&amp;tbl=xx&amp;tbl=xx</div><div class="line"></div><div class="line">@RequestMapping(value=&quot;/tables/triggers&quot;, method=RequestMethod.GET)</div><div class="line">@ResponseBody</div><div class="line">public TablePTPDetailBody getTablesTriggers(</div><div class="line">	@RequestParam(required=true,value=&quot;tbl&quot;)List&lt;String&gt;tblNames</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">locahost:8081/API/PTP/oozieviz/tablesTriggers</div><div class="line"></div><div class="line">@RequestMapping(value=&quot;/tables/triggers&quot;, method=RequestMethod.POST)</div><div class="line">@ResponseBody</div><div class="line">public TablePTPDetailBody getTablesTriggers(</div><div class="line">@RequestBody Map&lt;String,Object&gt;payload</div><div class="line">)&#123;</div><div class="line">	List&lt;String&gt;tables = (List&lt;String&gt;)payload.get(&quot;tbl);	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
 
     
       
-        
-        
+      
 
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">Reward</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.jpg" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
         
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2018</h2>
+          <div class="post-tags">
+            
+              <a href="/tags/http-request/">http request</a>
+            
           </div>
         
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            06-30
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/06/30/cros/" class="archive-post-link">
-            cros
-          </a>
-        </span>
-      </div>
+        
+        
+  <nav class="post-nav">
     
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            06-30
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/06/30/postman/" class="archive-post-link">
-            postman
-          </a>
-        </span>
-      </div>
+      <a class="prev" href="/2018/06/30/cros/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">cros</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            06-30
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/06/30/google-guava/" class="archive-post-link">
-            google_guava
-          </a>
-        </span>
-      </div>
     
-      
-        
-        
-
-        
-      
-      
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            06-29
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/06/29/oozie-distcp/" class="archive-post-link">
-            oozie_distcp
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
+      <a class="next" href="/2018/06/30/google-guava/">
+        <span class="next-text nav-default">google_guava</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>  
       </main>
@@ -424,6 +433,24 @@
     </div>
 
     
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/06/30/postman/';
+        this.page.identifier = '2018/06/30/postman/';
+        this.page.title = 'postman';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//taobupt.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
 
 
     
