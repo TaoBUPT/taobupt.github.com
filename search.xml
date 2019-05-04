@@ -13,12 +13,15 @@
 <p>after earning call, if the final price is:</p>
 <ol>
 <li><blockquote>
-<p>= <code>190$</code> : then we have capital gain: (2.03-0.61) * 100 = <code>142$</code></p>
+<p><code>= 190$</code> : then we have capital gain: (2.03-0.61) * 100 = <code>142$</code></p>
 </blockquote>
 </li>
-<li>&lt;= <code>180$</code> : then we have capital loss: (190-180+2.03-0.61) * 100 = <code>858$</code></li>
 <li><blockquote>
-<p><code>180$</code> : then we have capital loss between <code>0$</code> - <code>858$</code></p>
+<p><code>&lt;= 180$</code> : then we have capital loss: (190-180+2.03-0.61) * 100 = <code>858$</code></p>
+</blockquote>
+</li>
+<li><blockquote>
+<p><code>&gt;180$</code> : then we have capital loss between <code>0$</code> - <code>858$</code></p>
 </blockquote>
 </li>
 </ol>
