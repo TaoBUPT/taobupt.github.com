@@ -41,7 +41,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/05/04/airflow/index.html">
 <meta property="og:site_name" content="Stewart">
 <meta property="og:description" content="Apache Airflow">
-<meta property="og:updated_time" content="2019-05-04T11:26:42.708Z">
+<meta property="og:updated_time" content="2019-05-04T11:30:13.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="airflow">
 <meta name="twitter:description" content="Apache Airflow">
@@ -269,28 +269,27 @@
       
         <h3 id="hdfs-cluster"><a href="#hdfs-cluster" class="headerlink" title="hdfs cluster"></a>hdfs cluster</h3><p><a href="https://www.linode.com/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/" target="_blank" rel="external">hdfs cluster configuration</a></p>
 <p>tips:</p>
-<ol>
-<li>if three nodes cannot communicate, you should check you .ssh/authorized_keys. make sure below files have right permissions. No write permission</li>
-</ol>
 <ul>
-<li>-rw-r–r–  1 hadoop hadoop 1.5K May  2 21:16 authorized_keys</li>
+<li><p>if three nodes cannot communicate, you should check you .ssh/authorized_keys. make sure below files have right permissions. No write permission</p>
+</li>
+<li><p>-rw-r–r–  1 hadoop hadoop 1.5K May  2 21:16 authorized_keys</p>
+</li>
 <li>-rw——-  1 hadoop hadoop 3.2K Apr 30 00:06 id_rsa</li>
 <li>-rw-r–r–  1 hadoop hadoop  766 Apr 30 00:06 id_rsa.pub</li>
 <li>-rw-r–r–  1 hadoop hadoop 1.4K Apr 30 06:03 known_hosts</li>
-<li></li>
 </ul>
-<ol>
-<li><p>give more memory to below properties as possible. <strong>yarn.nodemanager.resource.memory-mb</strong> should a little smaller than your main memory size</p>
+<ul>
+<li>give more memory to below properties as possible. <strong>yarn.nodemanager.resource.memory-mb</strong> should a little smaller than your main memory size</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;property&gt;</div><div class="line">        &lt;name&gt;yarn.nodemanager.resource.memory-mb&lt;/name&gt;</div><div class="line">        &lt;value&gt;32768&lt;/value&gt;</div><div class="line">&lt;/property&gt;</div><div class="line"></div><div class="line">&lt;property&gt;</div><div class="line">        &lt;name&gt;yarn.scheduler.maximum-allocation-mb&lt;/name&gt;</div><div class="line">        &lt;value&gt;4096&lt;/value&gt;</div><div class="line">&lt;/property&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>sync.sh</p>
-</li>
-</ol>
+<ul>
+<li>sync.sh</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for node in node1 node2; do</div><div class="line">    scp ~/hadoop/etc/hadoop/* $node:/home/hadoop/hadoop/etc/hadoop/;</div><div class="line">done</div></pre></td></tr></table></figure>
-<ol>
-<li>point these value to directories which has large space.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;property&gt;</div><div class="line">            &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</div><div class="line">            &lt;value&gt;/vol/data/nameNode&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line"></div><div class="line">    &lt;property&gt;</div><div class="line">            &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</div><div class="line">            &lt;value&gt;/vol/data/dataNode&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line"></div><div class="line">    &lt;property&gt;</div><div class="line">            &lt;name&gt;dfs.replication&lt;/name&gt;</div><div class="line">            &lt;value&gt;2&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
+<ul>
+<li>point these value to directories which has large space.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;property&gt;</div><div class="line">            &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</div><div class="line">            &lt;value&gt;/vol/data/nameNode&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line"></div><div class="line">    &lt;property&gt;</div><div class="line">            &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</div><div class="line">            &lt;value&gt;/vol/data/dataNode&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line"></div><div class="line">    &lt;property&gt;</div><div class="line">            &lt;name&gt;dfs.replication&lt;/name&gt;</div><div class="line">            &lt;value&gt;2&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div></pre></td></tr></table></figure>
 <h3 id="hive"><a href="#hive" class="headerlink" title="hive"></a>hive</h3><p><a href="https://backtobazics.com/big-data/4-steps-to-configure-hive-with-mysql-metastore-on-centos/" target="_blank" rel="external">configuration</a></p>
 <p>tips:</p>
 <ol>
