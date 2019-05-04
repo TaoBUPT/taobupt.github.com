@@ -3,6 +3,61 @@
   
     
     <entry>
+      <title><![CDATA[options]]></title>
+      <url>/2019/05/04/options/</url>
+      <content type="html"><![CDATA[<p>On 04/30/2019, the price of APPL: <code>200.67$</code></p>
+<ol>
+<li>sell <code>190$</code> put =&gt; you got <code>2.03 * 100</code></li>
+<li>buy <code>180$</code> put =&gt; you paid <code>0.61 * 100</code></li>
+</ol>
+<p>after earning call, if the final price is:</p>
+<ol>
+<li><blockquote>
+<p>= <code>190$</code> : then we have capital gain: (2.03-0.61) * 100 = <code>142$</code></p>
+</blockquote>
+</li>
+<li>&lt;= <code>180$</code> : then we have capital loss: (190-180+2.03-0.61) * 100 = <code>858$</code></li>
+<li><blockquote>
+<p><code>180$</code> : then we have capital loss between <code>0$</code> - <code>858$</code></p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p>potential ROR: <code>142 / 1000 = 14.2%</code></p>
+<p>leverage ratio: <code>1000$ / 200.67$ * 100 = 20.067</code></p>
+<p><img src="ror.png" alt="ror"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> finance </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> stocks </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[deep-learning]]></title>
+      <url>/2019/03/11/deep-learning/</url>
+      <content type="html"></content>
+      
+        
+        <tags>
+            
+            <tag> deep-learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Texas-To-California]]></title>
       <url>/2018/07/04/Texas-To-California/</url>
       <content type="html"><![CDATA[<h2 id="Jan-23-2018-had-on-site-interivew-in-EA"><a href="#Jan-23-2018-had-on-site-interivew-in-EA" class="headerlink" title="Jan 23, 2018 had on-site interivew in EA"></a>Jan 23, 2018 had on-site interivew in EA</h2><p><img src="https://lh3.googleusercontent.com/C9LwudKG3VEJGmVbT4lF7YRgist7wus7Hk3mgW5NzRRL5ARKwUfXdplJjZsIUKTHYBGXT908xoxFP6OsqW6MLBSJV3q5D85EIiELCvgLwx1_RZrnvzvrHBuwJPdGs7IsxeDSPjjCWw=w2400" alt="EA Onsite"></p>
